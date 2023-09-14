@@ -87,12 +87,8 @@
   <header class="navbar-fixed-top">
     <!-- <div class="container">  -->
       <!--======= LOGO =========-->
-      <div class="logo"> <a href="index.html"><img src="assets/images/sosmed/sikad_logo.png ?>" alt=""></a> </div>
-      <div class="logo"> 
-        <a href="#">SIKAD
-          <!-- <img src="assets/images/sosmed/1.png" alt="" > -->
-        </a> 
-      </div>
+      <div class="logo"> <a href="index.php"><img src="assets/image/sosmed/sikad_logo.png ?>" style="width:75px;height:75px;" alt=""></a> </div>
+      
       <!--======= NAVIGATION =========-->
       <nav>
         <ul id="ownmenu" class="ownmenu">
@@ -201,7 +197,7 @@
           <h3>Berita</h3>
           <hr>
         </div>
-        
+        <!--
         <ul class="row">
 
                     <li class="col-md-3"> 
@@ -237,9 +233,9 @@
                     </tr>
                     <tr>
               </table>
-            <div class="post-img down"> 
+            <div class="post-img down"> -->
               <!-- <img class="img-responsive" src="<?php// echo base_url()?>gambar/post/" alt="" >  -->
-            </div>
+           <!-- </div>
           </li>                
 
         
@@ -276,9 +272,9 @@
                     </tr>
                     <tr>
               </table>
-            <div class="post-img down"> 
+            <div class="post-img down"> -->
               <!-- <img class="img-responsive" src="<?php// echo base_url()?>gambar/post/" alt="" >  -->
-            </div>
+           <!-- </div>
           </li>                
 
         
@@ -315,9 +311,9 @@
                     </tr>
                     <tr>
               </table>
-            <div class="post-img down"> 
+            <div class="post-img down"> -->
               <!-- <img class="img-responsive" src="<?php// echo base_url()?>gambar/post/" alt="" >  -->
-            </div>
+           <!-- </div>
           </li>                
 
         
@@ -354,9 +350,9 @@
                     </tr>
                     <tr>
               </table>
-            <div class="post-img down"> 
+            <div class="post-img down"> -->
               <!-- <img class="img-responsive" src="<?php// echo base_url()?>gambar/post/" alt="" >  -->
-            </div>
+         <!--   </div>
           </li>                
 
         
@@ -393,9 +389,9 @@
                     </tr>
                     <tr>
               </table>
-            <div class="post-img down"> 
+            <div class="post-img down"> -->
               <!-- <img class="img-responsive" src="<?php// echo base_url()?>gambar/post/" alt="" >  -->
-            </div>
+          <!--  </div>
           </li>                
 
         
@@ -432,9 +428,9 @@
                     </tr>
                     <tr>
               </table>
-            <div class="post-img down"> 
+            <div class="post-img down"> -->
               <!-- <img class="img-responsive" src="<?php// echo base_url()?>gambar/post/" alt="" >  -->
-            </div>
+          <!--  </div>
           </li>                
 
         
@@ -471,9 +467,9 @@
                     </tr>
                     <tr>
               </table>
-            <div class="post-img down"> 
+            <div class="post-img down"> -->
               <!-- <img class="img-responsive" src="<?php// echo base_url()?>gambar/post/" alt="" >  -->
-            </div>
+          <!--  </div>
           </li>                
 
         
@@ -510,9 +506,9 @@
                     </tr>
                     <tr>
               </table>
-            <div class="post-img down"> 
+            <div class="post-img down"> -->
               <!-- <img class="img-responsive" src="<?php// echo base_url()?>gambar/post/" alt="" >  -->
-            </div>
+           <!-- </div>
           </li>                
 
         
@@ -549,9 +545,9 @@
                     </tr>
                     <tr>
               </table>
-            <div class="post-img down"> 
+            <div class="post-img down"> -->
               <!-- <img class="img-responsive" src="<?php// echo base_url()?>gambar/post/" alt="" >  -->
-            </div>
+          <!--  </div>
           </li>                
 
         
@@ -588,7 +584,7 @@
                     </tr>
                     <tr>
               </table>
-            <div class="post-img down"> 
+            <div class="post-img down"> -->
               <!-- <img class="img-responsive" src="<?php// echo base_url()?>gambar/post/" alt="" >  -->
             </div>
           </li>                
@@ -618,7 +614,7 @@
   <!-- <div class="container">
     <div class="col-sm-12 cont-grid-one yes_magr" id='grafik'>
       <a class='icon-box' src=''>
-        <img src="assets/images/sosmed/blue-tail.png" alt='->' />
+        <img src="assets/image/sosmed/blue-tail.png" alt='->' />
         KEGIATAN ARSIP
       </a>
 
@@ -659,21 +655,21 @@
         <!-- About Us -->
         <div class="col-md-12">
           <div class="small-info"> 
-            <!-- <img src="assets/images/sosmed/logo1.png" alt=""> -->
+            <!-- <img src="assets/image/sosmed/logo1.png" alt=""> -->
             <p>Jl. Penanggungan No.7 Kediri, Jawa Timur</p>
             
             <ul class="social_icons">
               <li class="facebook">
                 <a href="https://www.facebook.com/">
-                    <img src="assets/images/sosmed/fb.png" style="max-width: 50px; max-height: 50px; line-height: 20px;"></a>
+                    <img src="assets/image/sosmed/fb.png" style="max-width: 50px; max-height: 50px; line-height: 20px;"></a>
               </li>
               <li class="twitter"><a href="https://youtube.com/">
-                    <img src="assets/images/sosmed/youtube.png" style="max-width: 50px; max-height: 50px; line-height: 20px;">
+                    <img src="assets/image/sosmed/youtube.png" style="max-width: 50px; max-height: 50px; line-height: 20px;">
                 </a>
               </li>
               <li class="instagram">
                 <a href="https://www.instagram.com/">
-                    <img src="assets/images/sosmed/ig.png" style="max-width: 50px; max-height: 50px; line-height: 20px;">
+                    <img src="assets/image/sosmed/ig.png" style="max-width: 50px; max-height: 50px; line-height: 20px;">
                 </a></li>
             </ul>
 
@@ -706,16 +702,16 @@ $(document).ready(function(){
 });
 </script>
 
-<a type="button" href="#home" class="scroll button" id="tombolScrollTop" style="display: block;"><img src="http://disdukcapil.tangerangselatankota.go.id/asset/theme/disduk2/images/top-arrow.png" alt=""></a>
+<a type="button" href="#home" class="scroll button" id="tombolScrollTop" style="display: block;"><img src="assets/image/home.png" alt=""></a>
 
 
 <script src="assets/main/js/jquery-1.11.0.min.js"></script> 
 <script src="assets/main/js/bootstrap.min.js"></script> 
 
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="charts/highcharts.js"></script>
+<script src="charts/modules/exporting.js"></script>
+<script src="charts/modules/export-data.js"></script>
+<script src="charts/modules/accessibility.js"></script>
 
 <script>
 $(function () {
