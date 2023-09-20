@@ -1,5 +1,6 @@
 <html lang="en">
 <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SIKAD | DISPERDAGIN KOTA KEDIRI</title>
@@ -194,9 +195,31 @@
     <section class="blog">
       <div class="container"> 
         <div class="tittle tittle-2">
-          <h3>Berita</h3>
+          <h3>LAYANAN KAMI</h3>
           <hr>
         </div>
+    <div class="container">
+      <div class="row g-0">
+        <div class="col-md-4">
+        <a href="https://www.youtube.com" target="_blank">
+        <img src="tombola.jpg" width="300" height="300" />
+        <p align="middle">tombol a</p>
+        </a>
+        </div>
+        <div class="col-md-4">
+        <a href="https://www.facebook.com" target="_blank">
+        <img src="tombolb.jpg" width="300" height="300" />
+        <p align="middle">tombol b</p>
+        </a>
+        </div>
+        <div class="col-md-4">
+        <a href="https://www.google.com" target="_blank">
+        <img src="tombolc.jpg" width="300" height="300" />
+        <p align="middle">tombol c</p>
+        </a>
+        </div>
+      </div>
+    </div>
         <!--
         <ul class="row">
 
