@@ -29,35 +29,15 @@ https://templatemo.com/tm-538-digital-trend
 </head>
 <body>
      <style type="text/css">
-
-     .isi-dropdown 
-	{
-		position: absolute;
-		display: none;
-	
-		z-index: 20;
-		background-color: rgba(34, 140, 159, 0.733);
-	}
-     .isi-dropdown a
-	{
-		color: #ffffff !important;
-	}
-     .isi-dropdown a:hover 
-	{
-		color: #fffb00 !important;
-		background: rgb(34, 141, 159) !important;
-          display: block;
-          
-	}
      </style>
 
      <!-- MENU BAR -->
           <!-- , ISI,Layanan(Dropdown), Zona Integritas, UNDUHAN-->
     <nav class="navbar navbar-expand-lg">
-        <div class="container">
+        
             <a href="index.php">
                <div class="logo">
-                    <img src="images/dp1.png" alt="logo" style="height: 80px;">
+                    <img src="images/dp1.png" alt="logo" style="height: 70px;">
                </div>
             </a>
 
@@ -125,7 +105,7 @@ https://templatemo.com/tm-538-digital-trend
                     </i>
                 </ul>
             </div>
-        </div>
+        
     </nav>
 
 
@@ -136,20 +116,20 @@ https://templatemo.com/tm-538-digital-trend
 
                     <div class="col-lg-12 col-12">
                          <h2 class="mb-5 text-center" data-aos="fade-up">
-                              Berita
+                              Berita Terkini 
                           </h2>
   
 
                          <div class="owl-carousel owl-theme" id="project-slide">
                               <div class="item project-wrapper" data-aos="fade-up" data-aos-delay="100">
-                                   <img src="images/project/project-image01.jpg" class="img-fluid" alt="project image">
-
+                                   <img src="images/project/b1.jpg" class="img-fluid" alt="project image" >
+ 
                                    <div class="project-info">
-                                        <small>Marketing</small>
+                                        <small>DSF</small>
 
                                         <h3>
                                              <a href="project-detail.html">
-                                                  <span>Pekerja Muda</span>
+                                                  <span>Brantas, beyond infinity</span>
                                                   <i class="fa fa-angle-right project-icon"></i>
                                              </a>
                                         </h3>
@@ -157,14 +137,14 @@ https://templatemo.com/tm-538-digital-trend
                               </div>
 
                               <div class="item project-wrapper" data-aos="fade-up">
-                                   <img src="images/project/project-image02.jpg" class="img-fluid" alt="project image">
+                                   <img src="images/project/b2.jpg" class="img-fluid" alt="project image">
 
                                    <div class="project-info">
-                                        <small>Website</small>
+                                        <small>DSF</small>
 
                                         <h3>
                                              <a href="project-detail.html">
-                                                  <span>Wanita Karier</span>
+                                                  <span>Brantas, beyond infinity</span>
                                                   <i class="fa fa-angle-right project-icon"></i>
                                              </a>
                                         </h3>
@@ -172,14 +152,14 @@ https://templatemo.com/tm-538-digital-trend
                               </div>
 
                               <div class="item project-wrapper" data-aos="fade-up">
-                                   <img src="images/project/project-image03.jpg" class="img-fluid" alt="project image">
+                                   <img src="images/project/b3.jpg" class="img-fluid" alt="project image">
 
                                    <div class="project-info">
-                                        <small>Branding</small>
+                                        <small>DSF</small>
 
                                         <h3>
                                              <a href="project-detail.html">
-                                                  <span>Usaha Lokal</span>
+                                                  <span>Brantas, beyond infinity</span>
                                                   <i class="fa fa-angle-right project-icon"></i>
                                              </a>
                                         </h3>
@@ -187,14 +167,14 @@ https://templatemo.com/tm-538-digital-trend
                               </div>
 
                               <div class="item project-wrapper" data-aos="fade-up">
-                                   <img src="images/project/project-image04.jpg" class="img-fluid" alt="project image">
+                                   <img src="images/project/b1.jpg" class="img-fluid" alt="project image">
 
                                    <div class="project-info">
-                                        <small>Social Media</small>
+                                        <small>DSF</small>
 
                                         <h3>
                                              <a href="project-detail.html">
-                                                  <span>Pojok Sehat</span>
+                                                  <span>Brantas, beyond infinity</span>
                                                   <i class="fa fa-angle-right project-icon"></i>
                                              </a>
                                         </h3>
@@ -202,14 +182,14 @@ https://templatemo.com/tm-538-digital-trend
                               </div>
 
                               <div class="item project-wrapper" data-aos="fade-up">
-                                   <img src="images/project/project-image05.jpg" class="img-fluid" alt="project image">
+                                   <img src="images/project/b2.jpg" class="img-fluid" alt="project image">
 
                                    <div class="project-info">
-                                        <small>Video</small>
+                                        <small>DSF</small>
 
                                         <h3>
                                              <a href="project-detail.html">
-                                                  <span>Utamakan Sehat</span>
+                                                  <span>Brantas, beyond infinity</span>
                                                   <i class="fa fa-angle-right project-icon"></i>
                                              </a>
                                         </h3>
@@ -234,14 +214,14 @@ https://templatemo.com/tm-538-digital-trend
 
                                    <a href="contact.html" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Tekan Disini</a>
 
-                                   <strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-phone mr-2"></i> +99 080 070 4224</strong>
+                                   <strong class="d-block py-3 pl- text-white" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-phone mr-2"></i> +62 123 456 789</strong>
                               </div>
                         </div>
 
                         <div class="col-lg-6 col-12">
                           <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
 
-                            <img src="images/working-girl.png" class="img-fluid" alt="working girl">
+                            <img src="images/project/logoH1.png" class="img-fluid" alt="working girl">
                           </div>
                         </div>
 
@@ -258,10 +238,10 @@ https://templatemo.com/tm-538-digital-trend
                     <div class="col-lg-7 mx-auto col-md-10 col-12">
                          <div class="about-info">
 
-                              <h2 class="mb-4" data-aos="fade-up">the best <strong>Digital Marketing agency</strong> in Rio de Janeiro</h2>
+                              <h2 class="mb-4" data-aos="fade-up">the best <strong class="gradient-text">Digital Marketing agency</strong> in Rio de Janeiro</h2>
 
                               <p class="mb-0" data-aos="fade-up">Total 5 HTML pages are included in this template from TemplateMo website. Please check 2 <a href="blog.html">blog</a> pages, <a href="project-detail.html">project</a> page, and <a href="contact.html">contact</a> page. 
-                              <br><br>You are <strong>allowed</strong> to use this template for commercial or non-commercial purpose. You are NOT allowed to redistribute the template ZIP file on template collection websites.</p>
+                              <br><br>You are <strong class="gradient-text">allowed</strong> to use this template for commercial or non-commercial purpose. You are NOT allowed to redistribute the template ZIP file on template collection websites.</p>
                          </div>
 
                          <div class="about-image" data-aos="fade-up" data-aos-delay="200">
@@ -315,7 +295,11 @@ https://templatemo.com/tm-538-digital-trend
         <div class="row">
 
           <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
-            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">We make creative <strong>brands</strong> only.</h1>
+               <h1 class="text-white custom-color" data-aos="fade-up" data-aos-delay="100">
+                    Disperdagin 
+                    <strong class="gradient-text">Kota</strong> 
+                    Kediri.
+               </h1>
           </div>
 
           <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
