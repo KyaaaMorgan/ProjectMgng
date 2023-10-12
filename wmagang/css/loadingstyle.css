@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top right ,#014daf,#16a75c);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Mengatur teks ke tengah secara horizontal */
+}
+
+p {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.loader {
+    width: 100px;
+    height: 10px;
+    background-color: white; /* Warna garis */
+    animation: expand 2s linear infinite;
+}
+
+@keyframes expand {
+    0% {
+        width: 10px; /* Lebar awal garis */
+    }
+    100% {
+        width: 100px; /* Lebar maksimum garis */
+    }
+}
