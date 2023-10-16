@@ -3,18 +3,9 @@
 <head>
 
      <title>DISPERDAGIN | Dinas Perdagangan Dan Industri</title>
-<!--
 
-DIGITAL TREND
-
-https://templatemo.com/tm-538-digital-trend
-
--->
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
      <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -22,15 +13,17 @@ https://templatemo.com/tm-538-digital-trend
      <link rel="stylesheet" href="css/aos.css">
      <link rel="stylesheet" href="css/owl.carousel.min.css">
      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="shorcut icon" href="images/lpicon2.png">
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/templatemo-digital-trend.css">
 
 </head>
 <body>
-     <style type="text/css">
-     </style>
 
+<div class="loading-screen">
+     <div class="loader"></div>
+</div>
      <!-- MENU BAR -->
           <!-- , ISI,Layanan(Dropdown), Zona Integritas, UNDUHAN-->
     <nav class="navbar navbar-expand-lg">
@@ -49,13 +42,13 @@ https://templatemo.com/tm-538-digital-trend
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link smoothScroll">Beranda</a>
+                        <a href="index.php" class="nav-link smoothScroll" >Beranda</a>
                     </li>
                     <li class="nav-item">
-                         <a href="#project" class="nav-link smoothScroll">Berita</a>
+                         <a href="#project" class="nav-link smoothScroll" >Berita</a>
                      </li> 
                     <li class="nav-item">
-                        <a href="#" class="nav-link smoothScroll">Informasi</a>
+                        <a href="#" class="nav-link smoothScroll" >Informasi</a>
                         <ul class="isi-dropdown">
 					<li><a href="#">Pasar</a></li>
 					<li><a href="#">Minimarket</a></li>
@@ -64,7 +57,7 @@ https://templatemo.com/tm-538-digital-trend
 				     </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Layanan</a>
+                        <a href="#" class="nav-link" >Layanan</a>
                         <ul class="isi-dropdown">
                          <li><a href="#">Bantuan Modal</a></li>
                          <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
@@ -75,16 +68,16 @@ https://templatemo.com/tm-538-digital-trend
 				     </ul>
                     </li>
                     <li class="nav-item">
-                         <a href="#" class="nav-link">Produk Unggulan</a>
+                         <a href="#" class="nav-link" >Produk Unggulan</a>
                      </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Zona Integritas</a>
+                        <a href="#" class="nav-link" >Zona Integritas</a>
                     </li>
                     <li class="nav-item">
-                         <a href="#" class="nav-link smoothScroll">Unduhan</a>
+                         <a href="#" class="nav-link smoothScroll" >Unduhan</a>
                      </li>
                      <li class="nav-item">
-                         <a href="contact.html" class="nav-link contact">Kontak</a>
+                         <a href="contact.php" class="nav-link contact" >Kontak</a>
                      </li>
                      <i class="fa fa-eye">
                          <?php
@@ -221,7 +214,7 @@ https://templatemo.com/tm-538-digital-trend
                         <div class="col-lg-6 col-12">
                           <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
 
-                            <img src="images/project/logoH1.png" class="img-fluid" alt="working girl">
+                            <img src="images/hero.png" class="img-fluid" alt="working girl">
                           </div>
                         </div>
 
@@ -277,7 +270,7 @@ https://templatemo.com/tm-538-digital-trend
                       <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo.</h2>
 
                       <p data-aos="fade-up" data-aos-delay="400">
-                        <strong>Mary Zoe</strong>
+                        <strong class="gradient-text">Mary Zoe</strong>
 
                         <span class="mx-1">/</span>
 
@@ -297,8 +290,7 @@ https://templatemo.com/tm-538-digital-trend
           <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
                <h1 class="text-white custom-color" data-aos="fade-up" data-aos-delay="100">
                     Disperdagin 
-                    <strong class="gradient-text">Kota</strong> 
-                    Kediri.
+                    <strong class="gradient-text"><br>Kota Kediri</strong> 
                </h1>
           </div>
 
@@ -363,6 +355,8 @@ https://templatemo.com/tm-538-digital-trend
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
+     <script src="js/transition.js"></script>
+     <script src="js/loader.js"></script>
 
 </body>
 </html>
