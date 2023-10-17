@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Maps</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw" defer></script>
+    <script>
+        function initMap() {
+          const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: -7.8116181, lng: 111.9973367 }, // Koordinat tengah peta
+            zoom: 15, // Tingkat zoom
+          });
+      
+          // Tambahkan marker pertama
+          const marker1 = new google.maps.Marker({
+            position: { lat: -7.8137655, lng: 111.9935059 }, 
+            map: map,
+            title: "Marker 1"
+          });
+      
+          // Tambahkan marker kedua
+          const marker2 = new google.maps.Marker({
+            position: { lat: -7.8113918, lng: 111.9980193 },
+            map: map,
+            title: "Marker 2"
+          });
+
+          // Tambahkan marker ketiga
+          const marker3 = new google.maps.Marker({
+            position: { lat: -7.8115804, lng: 111.9967186 },
+            map: map,
+            title: "Marker 2"
+          });
+        }
+      </script>
+      <script>
+        const map = L.map("map").setView([-7.8116181, 111.9973367], 15);
+      
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+      
+        // Tambahkan marker pertama
+        L.marker([-7.798205, 110.364460]).addTo(map).bindPopup("Marker 1");
+      
+        // Tambahkan marker kedua
+        L.marker([-7.789379, 110.365629]).addTo(map).bindPopup("Marker 2");
+
+        // Tambahkan marker ketiga
+        L.marker([-7.8115804, 111.9967186]).addTo(map).bindPopup("Marker 2");
+      </script>
+      
+      
+
+</head>
+<body>
+    <div id="map" style="width: 50%; height: 400px;"></div>
+</body>
+</html>

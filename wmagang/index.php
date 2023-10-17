@@ -59,7 +59,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link" >Layanan</a>
                         <ul class="isi-dropdown">
-                         <li><a href="#">Bantuan Modal</a></li>
+                         <li><a href="https://banmod.indagkediri.online/home.html">Bantuan Modal</a></li>
                          <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
                          <li><a href="#">Legalitas Merk</a></li>
 					<li><a href="#">Sertifikasi Halal</a></li>
@@ -68,7 +68,7 @@
 				     </ul>
                     </li>
                     <li class="nav-item">
-                         <a href="#" class="nav-link" >Produk Unggulan</a>
+                         <a href="https://pusakaumkm.id/home/" class="nav-link" >Produk Unggulan</a>
                      </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link" >Zona Integritas</a>
