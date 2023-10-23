@@ -47,19 +47,24 @@
                     <li class="nav-item">
                          <a href="#project" class="nav-link smoothScroll" >Berita</a>
                      </li> 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link smoothScroll" >Informasi</a>
-                        <ul class="isi-dropdown">
-					<li><a href="#">Pasar</a></li>
-					<li><a href="#">Minimarket</a></li>
-					<li><a href="#">Mall</a></li>
-                         <li><a href="#">Industri Kecil Menengah</a></li>
-				     </ul>
-                    </li>
+                     <li class="nav-item">
+                       <a href="#" class="nav-link" >Informasi</a>
+                       <ul class="isi-dropdown">
+                       <li><a href="#">Pasar</a></li>
+                       <li id="minimarket"><a href="#">Minimarket</a>
+                        <ul class="down">
+                           <li><a href="indomaret.html">Indomaret</a></li>
+                           <li><a href="#">Alfamart</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Mall</a></li>
+                        <li><a href="#">Industri Kecil Menengah</a></li>
+                 </ul>
+                 </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link" >Layanan</a>
                         <ul class="isi-dropdown">
-                         <li><a href="https://banmod.indagkediri.online/home.html">Bantuan Modal</a></li>
+                         <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
                          <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
                          <li><a href="#">Legalitas Merk</a></li>
 					<li><a href="#">Sertifikasi Halal</a></li>
@@ -68,7 +73,7 @@
 				     </ul>
                     </li>
                     <li class="nav-item">
-                         <a href="https://pusakaumkm.id/home/" class="nav-link" >Produk Unggulan</a>
+                         <a href="https://pusakaumkm.id/home/" class="nav-link" target="_blank">Produk Unggulan</a>
                      </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link" >Zona Integritas</a>
