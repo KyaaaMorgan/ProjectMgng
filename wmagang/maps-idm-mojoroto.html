@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maps Marker Indomaret Mojoroto</title>
+    <link rel="shorcut icon" href="images/lpicon2.png">
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        // Inisialisasi peta dengan lokasi awal yang ditentukan
+        const initialLocation = { lat: -7.804341023077927, lng: 111.99901874589823 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: initialLocation,
+          zoom: 13,
+        });
+
+        // Array objek dengan informasi marker
+        const markers = [
+          {
+            position: { lat: -7.826927351102762, lng:  112.00030921129246 },
+            title: "Indomaret Agus Salim",
+          },
+          {
+            position: { lat: -7.827845434767996,  lng: 111.99669813158279 },
+            title: "Indomaret Kemunging",
+          },
+          {
+            position: { lat: -7.835722398777921, lng: 111.99373760483132 },
+            title: "Indomaret Raung",
+          },
+          {
+            position: { lat: -7.8274046237566175,  lng: 111.98686527732241 },
+            title: "Indomaret Semeru",
+          },
+          {
+            position: { lat: -7.811106735427172,  lng: 111.99274541124899 },
+            title: "Indomaret Veteran",
+          },
+          {
+            position: { lat: -7.824039906395721,  lng: 112.00564684788883 },
+            title: "Indomaret Wachid Hasyim",
+          },
+          {
+            position: { lat: -7.821534787036125,  lng: 111.99843272975353 },
+            title: "Indomaret Penanggungan",
+          },
+          {
+            position: { lat: -7.824039906395721,  lng: 112.00564684788883 },
+            title: "Indomaret Mojoroto",
+          },
+          {
+            position: { lat: -7.799083915771001,  lng: 112.00165040719352 },
+            title: "Indomaret Ahmad Dahlan",
+          },
+          {
+            position: { lat: -7.780775809919864,   lng: 112.00068399296815 },
+            title: "Indomaret Gatot Subroto Mrican",
+          },
+          {
+            position: { lat: -7.78398607541717,   lng: 112.00029775487566 },
+            title: "Indomaret Sersan Bahrun Mrican",
+          },
+        ];
+
+        // Loop untuk membuat dan menambahkan marker ke peta
+        for (const markerInfo of markers) {
+          const marker = new google.maps.Marker({
+            position: markerInfo.position,
+            map: map,
+            title: markerInfo.title,
+          });
+
+          // Tambahkan event listener untuk menangani klik marker
+          marker.addListener("click", () => {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(function (position) {
+                // Dapatkan koordinat lokasi pengguna
+                const userLocation = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude,
+                };
+
+                // Dapatkan koordinat marker yang diklik
+                const destination = marker.getPosition().toUrlValue();
+
+                // Buka Google Maps dengan arah dari lokasi pengguna ke tujuan
+                window.open(
+                  `https://www.google.com/maps/dir/${userLocation.lat},${userLocation.lng}/${destination}`
+                );
+              });
+            } else {
+              alert("Geolokasi tidak didukung oleh peramban Anda.");
+            }
+          });
+        }
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=initMap"></script>
+  </body>
+</html>
