@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maps Marker Indomaret Kota</title>
+    <link rel="shorcut icon" href="images/lpicon2.png">
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        // Inisialisasi peta dengan lokasi awal yang ditentukan
+        const initialLocation = { lat: -7.829347670572409, lng: 112.02491041750754 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: initialLocation,
+          zoom: 13.5,
+        });
+
+        // Array objek dengan informasi marker
+        const markers = [
+          {
+            position: { lat: -7.8508784867052395, lng: 112.02957282817553 },
+            title: "Indomaret Ngronggo",
+          },
+          {
+            position: { lat: -7.814801207522401, lng: 112.03417007278148 },
+            title: "Indomaret Doko Indah",
+          },
+          {
+            position: { lat: -7.810980514994962, lng: 112.02391880226132 },  
+            title: "Indomaret Selowareh Ngadirejo",
+          },
+          {
+            position: { lat: -7.818422494613062, lng: 112.01904945765298 }, 
+            title: "Indomaret Joyoboyo",
+          },
+          {
+            position: { lat: -7.845854320725291, lng: 112.00712518527371 }, 
+            title: "Indomaret Sersan Suharmaji",
+          },
+        ];
+
+        // Loop untuk membuat dan menambahkan marker ke peta
+        for (const markerInfo of markers) {
+          const marker = new google.maps.Marker({
+            position: markerInfo.position,
+            map: map,
+            title: markerInfo.title,
+          });
+
+          // Tambahkan event listener untuk menangani klik marker
+          marker.addListener("click", () => {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(function (position) {
+                // Dapatkan koordinat lokasi pengguna
+                const userLocation = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude,
+                };
+
+                // Dapatkan koordinat marker yang diklik
+                const destination = marker.getPosition().toUrlValue();
+
+                // Buka Google Maps dengan arah dari lokasi pengguna ke tujuan
+                window.open(
+                  `https://www.google.com/maps/dir/${userLocation.lat},${userLocation.lng}/${destination}`
+                );
+              });
+            } else {
+              alert("Geolokasi tidak didukung oleh peramban Anda.");
+            }
+          });
+        }
+      }
+
+      function getUserLocation() {
+        if (navigator.geolocation) {
+          // Coba untuk mendapatkan koordinat lokasi awal dari penyimpanan lokal
+          const userLocationString = localStorage.getItem("userLocation");
+
+          if (userLocationString) {
+            const userLocation = JSON.parse(userLocationString);
+            initMap(userLocation);
+          } else {
+            // Jika tidak ada data lokasi dalam penyimpanan lokal, minta izin Geolokasi
+            navigator.geolocation.getCurrentPosition(function (position) {
+              const userLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              };
+
+              // Simpan koordinat lokasi awal ke penyimpanan lokal
+              localStorage.setItem("userLocation", JSON.stringify(userLocation));
+
+              initMap(userLocation);
+            });
+          }
+        }
+      }
+
+      getUserLocation();
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=initMap"></script>
+  </body>
+</html>
