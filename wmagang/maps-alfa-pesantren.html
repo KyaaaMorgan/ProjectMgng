@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maps Marker Alfamart Pesantren</title>
+    <link rel="shorcut icon" href="images/lpicon2.png">
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        // Inisialisasi peta dengan lokasi awal yang ditentukan
+        const initialLocation = { lat: -7.845017196549945, lng: 112.02774273501325 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: initialLocation,
+          zoom: 13.2,
+        });
+
+        // Array objek dengan informasi marker
+        const markers = [
+        {
+            position: { lat: -7.830758615391627, lng: 112.04587058660734},
+            title: "Alfamart Mauni",
+        },
+        {
+            position: { lat: -7.832780558736911, lng: 112.05167380147536},
+            title: "Alfamart Imam Bakri",
+        },
+        {
+            position: { lat: -7.863872094152294, lng: 112.02859750080779},
+            title: "Alfamart Kapten Tendean",
+        },
+        ];
+
+        // Loop untuk membuat dan menambahkan marker ke peta
+        for (const markerInfo of markers) {
+          const marker = new google.maps.Marker({
+            position: markerInfo.position,
+            map: map,
+            title: markerInfo.title,
+          });
+
+          // Tambahkan event listener untuk menangani klik marker
+          marker.addListener("click", () => {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(function (position) {
+                // Dapatkan koordinat lokasi pengguna
+                const userLocation = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude,
+                };
+
+                // Dapatkan koordinat marker yang diklik
+                const destination = marker.getPosition().toUrlValue();
+
+                // Buka Google Maps dengan arah dari lokasi pengguna ke tujuan
+                window.open(
+                  `https://www.google.com/maps/dir/${userLocation.lat},${userLocation.lng}/${destination}`
+                );
+              });
+            } else {
+              alert("Geolokasi tidak didukung oleh peramban Anda.");
+            }
+          });
+        }
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=initMap"></script>
+  </body>
+</html>
