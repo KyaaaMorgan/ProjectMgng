@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>DISPERDAGIN | Dinas Perdagangan Dan Industri</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <!-- Tautan ke file CSS -->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/aos.css">
+     <link rel="stylesheet" href="css/owl.carousel.min.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="shortcut icon" href="images/lpicon2.png">
+
+     <!-- CSS utama Anda -->
+     <link rel="stylesheet" href="css/templatemo-digital-trend.css">
+
+     <!-- Tautan ke Leaflet CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+     <!-- Tautan ke Leaflet dan Google Maps JavaScript -->
+     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=initMap" defer></script>-->
+
+     <style>
+        #map, #mapkota,#mappesantren {
+            width: 100%;
+            height: 500px;
+            top: 45px;
+        }
+
+        #mojoroto, #pesantren, #kota {
+            display: none;
+        }
+     </style>
+</head>
+<body>
+
+<div class="loading-screen">
+     <div class="loader"></div>
+</div>
+     <!-- MENU BAR -->
+          <!-- , ISI,Layanan(Dropdown), Zona Integritas, UNDUHAN-->
+    <nav class="navbar navbar-expand-lg">
+        
+            <a href="index.php">
+               <div class="logo">
+                    <img src="images/dp1.png" alt="logo" style="height: 70px;">
+               </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.php" class="nav-link smoothScroll" >Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                         <a href="#project" class="nav-link smoothScroll" >Berita</a>
+                     </li> 
+                     <li class="nav-item">
+                       <a href="#" class="nav-link" >Informasi</a>
+                       <ul class="isi-dropdown">
+                       <li><a href="pasar.html">Pasar</a></li>
+                       <li id="minimarket"><a href="#">Minimarket</a>
+                        <ul class="down">
+                           <li><a href="indomaret.html">Indomaret</a></li>
+                           <li><a href="alfamart.html">Alfamart</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="mall.html">Mall</a></li>
+                        <li><a href="#">Industri Kecil Menengah</a></li>
+                 </ul>
+                 </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >Layanan</a>
+                        <ul class="isi-dropdown">
+                         <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
+                         <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
+                         <li><a href="#">Legalitas Merk</a></li>
+					<li><a href="#">Sertifikasi Halal</a></li>
+					<li><a href="#">Sinas</a></li>
+                         <li><a href="#">Tera/Tera Ulang</a></li>
+				     </ul>
+                    </li>
+                    <li class="nav-item">
+                         <a href="https://pusakaumkm.id/home/" class="nav-link" target="_blank">Produk Unggulan</a>
+                     </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >Zona Integritas</a>
+                    </li>
+                    <li class="nav-item">
+                         <a href="#" class="nav-link smoothScroll" >Unduhan</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="contact.php" class="nav-link contact" >Kontak</a>
+                     </li>
+                </ul>
+            </div>
+        
+    </nav>
+
+    <section class="testimonial section-padding">
+        <div class="container">
+             <div class="row">
+                  <div class="col-lg-6 col-md-7 col-12">
+                    <h1> <strong class="gradient-text" data-aos="fade-up" data-aos-delay="100">Lokasi Pasar Tradisional Kota Kediri</strong></h1>
+
+                    <div class="quote" data-aos="fade-up" data-aos-delay="200"></div>
+
+                    <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Berikut adalah Pasar Tradisional yang ada di Kota Kediri</h3>
+                  </div>
+             </div>
+             <div id="map"></div>
+    <script>
+      function initMap() {
+        // Inisialisasi peta dengan lokasi awal yang ditentukan
+        const initialLocation = { lat:  -7.818637138836507, lng: 112.01466402094775 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: initialLocation,
+          zoom: 14.7,
+        });
+
+        // Array objek dengan informasi marker
+        const markers = [         
+        {
+            position: { lat: -7.8141764534347775, lng: 112.03486841364106},
+            title: "Pasar Banjaran",
+          },
+        {
+            position: { lat: -7.821152359709583, lng: 112.016240883409},
+            title: "Pasar Setonobetek",
+          },
+        {
+            position: { lat: -7.820603916846701, lng: 112.02206417665654},
+            title: "Pasar Pahing",
+          },
+        {
+            position: { lat: -7.782565654313986, lng: 112.0001163182828},
+            title: "Pasar Mrican",
+          },
+        {
+            position: { lat: -7.81475805062981, lng: 112.00583949913076},
+            title: "Pasar Bandar",
+          },
+        {
+            position: { lat: -7.84625747286462, lng: 112.02704912738326},
+            title: "Pasar Grosir Ngronggo",
+          },
+        {
+            position: { lat: -7.8091203633112904, lng: 112.02206030887871},
+            title: "Pasar Ngaglik",
+          },
+        {
+            position: { lat: -7.801495828621876, lng: 112.00348248529596},
+            title: "Pasar Mojoroto",
+          },
+        {
+            position: { lat: -7.819674515435966, lng: 111.98783426929056},
+            title: "Pasar Campurejo",
+          },
+        {
+            position: { lat: -7.826953775025362, lng: 111.99608757541111},
+            title: "Pasar Muning",
+          },
+        {
+            position: { lat: -7.833023233742344, lng: 112.05152327347801},
+            title: "Pasar Pesantren",
+          },
+        {
+            position: { lat: -7.839208071551854, lng: 112.06476101684208},
+            title: "Pasar Tempurejo",
+          },
+        ];
+
+        // Loop untuk membuat dan menambahkan marker ke peta
+        for (const markerInfo of markers) {
+          const marker = new google.maps.Marker({
+            position: markerInfo.position,
+            map: map,
+            title: markerInfo.title,
+          });
+
+          // Tambahkan event listener untuk menangani klik marker
+          marker.addListener("click", () => {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(function (position) {
+                // Dapatkan koordinat lokasi pengguna
+                const userLocation = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude,
+                };
+
+                // Dapatkan koordinat marker yang diklik
+                const destination = marker.getPosition().toUrlValue();
+
+                // Buka Google Maps dengan arah dari lokasi pengguna ke tujuan
+                window.open(
+                  `https://www.google.com/maps/dir/${userLocation.lat},${userLocation.lng}/${destination}`
+                );
+              });
+            } else {
+              alert("Geolokasi tidak didukung oleh peramban Anda.");
+            }
+          });
+        }
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=initMap"></script>
+   </section>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
+               <h1 class="text-white custom-color" data-aos="fade-up" data-aos-delay="100">
+                    Disperdagin 
+                    <strong class="gradient-text"><br>Kota Kediri</strong> 
+               </h1>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="my-4">Contact Info</h4>
+
+            <p class="mb-1">
+              <i class="fa fa-phone mr-2 footer-icon"></i> 
+              +99 080 070 4224
+            </p>
+
+            <p>
+              <a href="#">
+                <i class="fa fa-envelope mr-2 footer-icon"></i>
+                hello@company.com
+              </a>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="my-4">Our Studio</h4>
+
+            <p class="mb-1">
+              <i class="fa fa-home mr-2 footer-icon"></i> 
+              Av. Lúcio Costa - Barra da Tijuca, Rio de Janeiro - RJ, Brazil
+            </p>
+          </div>
+
+          <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
+            <p class="copyright-text">Copyright &copy; 2020 Your Company
+            <br>
+            <a rel="nofollow noopener" href="https://templatemo.com">Design: TemplateMo</a></p>
+          </div>
+
+          <div class="col-lg-4 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+            
+            <ul class="footer-link">
+              <li><a href="#">Stories</a></li>
+              <li><a href="#">Work with us</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+            <ul class="social-icon">
+              <li><a href="#" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="#" class="fa fa-dribbble"></a></li>
+              <li><a href="#" class="fa fa-behance"></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+
+     <!-- SCRIPTS -->
+     <script>
+      var currentlyVisible = null; 
+    
+      function show(id) {
+        var x = document.getElementById(id);
+        
+        if (currentlyVisible) {
+          currentlyVisible.style.display = "none";
+        }
+        
+        if (x.style.display === "none" || !x.style.display) {
+          x.style.display = "block";
+          currentlyVisible = x;
+        } else {
+          x.style.display = "none";
+          currentlyVisible = null;
+        }
+      }
+    </script>    
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+     <script src="js/transition.js"></script>
+     <script src="js/loader.js"></script>
+
+</body>
+</html>
