@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maps Marker Pasar Kota Kediri</title>
+    <link rel="shorcut icon" href="images/lpicon2.png">
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        // Inisialisasi peta dengan lokasi awal yang ditentukan
+        const initialLocation = { lat: -7.822231821528243, lng: 112.017284721704 };  
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: initialLocation,
+          zoom: 13.2,
+        });
+
+        // Array objek dengan informasi marker
+        const markers = [         
+        {
+            position: { lat: -7.8141764534347775, lng: 112.03486841364106},
+            title: "Pasar Banjaran",
+          },
+        {
+            position: { lat: -7.821152359709583, lng: 112.016240883409},
+            title: "Pasar Setonobetek",
+          },
+        {
+            position: { lat: -7.820603916846701, lng: 112.02206417665654},
+            title: "Pasar Pahing",
+          },
+        {
+            position: { lat: -7.782565654313986, lng: 112.0001163182828},
+            title: "Pasar Mrican",
+          },
+        {
+            position: { lat: -7.81475805062981, lng: 112.00583949913076},
+            title: "Pasar Bandar",
+          },
+        {
+            position: { lat: -7.84625747286462, lng: 112.02704912738326},
+            title: "Pasar Grosir Ngronggo",
+          },
+        {
+            position: { lat: -7.8091203633112904, lng: 112.02206030887871},
+            title: "Pasar Ngaglik",
+          },
+        {
+            position: { lat: -7.801495828621876, lng: 112.00348248529596},
+            title: "Pasar Mojoroto",
+          },
+        {
+            position: { lat: -7.819674515435966, lng: 111.98783426929056},
+            title: "Pasar Campurejo",
+          },
+        {
+            position: { lat: -7.826953775025362, lng: 111.99608757541111},
+            title: "Pasar Muning",
+          },
+        {
+            position: { lat: -7.833023233742344, lng: 112.05152327347801},
+            title: "Pasar Pesantren",
+          },
+        {
+            position: { lat: -7.839208071551854, lng: 112.06476101684208},
+            title: "Pasar Tempurejo",
+          },
+        ];
+
+        // Loop untuk membuat dan menambahkan marker ke peta
+        for (const markerInfo of markers) {
+          const marker = new google.maps.Marker({
+            position: markerInfo.position,
+            map: map,
+            title: markerInfo.title,
+          });
+
+          // Tambahkan event listener untuk menangani klik marker
+          marker.addListener("click", () => {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(function (position) {
+                // Dapatkan koordinat lokasi pengguna
+                const userLocation = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude,
+                };
+
+                // Dapatkan koordinat marker yang diklik
+                const destination = marker.getPosition().toUrlValue();
+
+                // Buka Google Maps dengan arah dari lokasi pengguna ke tujuan
+                window.open(
+                  `https://www.google.com/maps/dir/${userLocation.lat},${userLocation.lng}/${destination}`
+                );
+              });
+            } else {
+              alert("Geolokasi tidak didukung oleh peramban Anda.");
+            }
+          });
+        }
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=initMap"></script>
+  </body>
+</html>
