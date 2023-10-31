@@ -50,14 +50,14 @@
                      <li class="nav-item">
                        <a href="#" class="nav-link" >Informasi</a>
                        <ul class="isi-dropdown">
-                       <li><a href="#">Pasar</a></li>
+                       <li><a href="pasar.html">Pasar</a></li>
                        <li id="minimarket"><a href="#">Minimarket</a>
                         <ul class="down">
                            <li><a href="indomaret.html">Indomaret</a></li>
-                           <li><a href="#">Alfamart</a></li>
+                           <li><a href="alfamart.html">Alfamart</a></li>
                         </ul>
                         </li>
-                        <li><a href="#">Mall</a></li>
+                        <li><a href="mall.html">Mall</a></li>
                         <li><a href="#">Industri Kecil Menengah</a></li>
                  </ul>
                  </li>
