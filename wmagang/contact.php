@@ -36,61 +36,66 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a href="index.php" class="nav-link smoothScroll">Beranda</a>
-            </li>
-            <li class="nav-item">
-                 <a href="#project" class="nav-link smoothScroll">Berita</a>
-             </li> 
-            <li class="nav-item">
-                <a href="#" class="nav-link smoothScroll">Informasi</a>
-                <ul class="isi-dropdown">
-  <li><a href="#">Pasar</a></li>
-  <li><a href="#">Minimarket</a></li>
-  <li><a href="#">Mall</a></li>
-                 <li><a href="#">Industri Kecil Menengah</a></li>
-     </ul>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Layanan</a>
-                <ul class="isi-dropdown">
-                 <li><a href="#">Bantuan Modal</a></li>
-                 <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
-                 <li><a href="#">Legalitas Merk</a></li>
-  <li><a href="#">Sertifikasi Halal</a></li>
-  <li><a href="#">Sinas</a></li>
-                 <li><a href="#">Tera/Tera Ulang</a></li>
-     </ul>
-            </li>
-            <li class="nav-item">
-                 <a href="#" class="nav-link">Produk Unggulan</a>
-             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Zona Integritas</a>
-            </li>
-            <li class="nav-item">
-                 <a href="#" class="nav-link smoothScroll">Unduhan</a>
-             </li>
-             <li class="nav-item">
-                 <a href="contact.php" class="nav-link contact">Kontak</a>
-             </li>
-             <i class="fa fa-eye">
-                 <?php
-                      //koneksi
-                      $conn = mysqli_connect('localhost','root','','db_counter');
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.php" class="nav-link smoothScroll" >Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                         <a href="#project" class="nav-link smoothScroll" >Berita</a>
+                     </li> 
+                     <li class="nav-item">
+                       <a href="#" class="nav-link" >Informasi</a>
+                       <ul class="isi-dropdown">
+                       <li><a href="pasar.html">Pasar</a></li>
+                       <li id="minimarket"><a href="#">Minimarket</a>
+                        <ul class="down">
+                           <li><a href="indomaret.html">Indomaret</a></li>
+                           <li><a href="alfamart.html">Alfamart</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="mall.html">Mall</a></li>
+                        <li><a href="#">Industri Kecil Menengah</a></li>
+                 </ul>
+                 </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >Layanan</a>
+                        <ul class="isi-dropdown">
+                         <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
+                         <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
+                         <li><a href="#">Legalitas Merk</a></li>
+					<li><a href="#">Sertifikasi Halal</a></li>
+					<li><a href="#">Sinas</a></li>
+                         <li><a href="#">Tera/Tera Ulang</a></li>
+				     </ul>
+                    </li>
+                    <li class="nav-item">
+                         <a href="https://pusakaumkm.id/home/" class="nav-link" target="_blank">Produk Unggulan</a>
+                     </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" >Zona Integritas</a>
+                    </li>
+                    <li class="nav-item">
+                         <a href="#" class="nav-link smoothScroll" >Unduhan</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="contact.php" class="nav-link contact" >Kontak</a>
+                     </li>
+                     <i class="fa fa-eye">
+                      <?php
+                          //koneksi
+                          $conn = mysqli_connect('localhost','root','','db_counter');
 
-                      //pilih database
-                      $count = mysqli_query($conn, "SELECT * FROM tb_counter");
+                          //pilih database
+                          $count = mysqli_query($conn, "SELECT * FROM tb_counter");
 
-                      //logika
-                      $row = mysqli_fetch_assoc($count);
-                      $current_count = $row['counts'];
-                      echo $current_count;
-                 ?>
-            </i>
-        </ul>
-    </div>
+                          //logika
+                          $row = mysqli_fetch_assoc($count);
+                          $current_count = $row['counts'];
+                          echo $current_count;
+                      ?>
+                    </i>
+                </ul>
+            </div>
     </nav>
 
 

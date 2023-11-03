@@ -236,10 +236,10 @@
                     <div class="col-lg-7 mx-auto col-md-10 col-12">
                          <div class="about-info">
 
-                              <h2 class="mb-4" data-aos="fade-up">the best <strong class="gradient-text">Digital Marketing agency</strong> in Rio de Janeiro</h2>
+                              <h2 class="mb-4" data-aos="fade-up">the best <strong class="gradient-text">Dinas Perdagangan dan Perindustrian</strong> in Kediri City</h2>
 
-                              <p class="mb-0" data-aos="fade-up">Total 5 HTML pages are included in this template from TemplateMo website. Please check 2 <a href="blog.html">blog</a> pages, <a href="project-detail.html">project</a> page, and <a href="contact.html">contact</a> page. 
-                              <br><br>You are <strong class="gradient-text">allowed</strong> to use this template for commercial or non-commercial purpose. You are NOT allowed to redistribute the template ZIP file on template collection websites.</p>
+                              <p class="mb-0" data-aos="fade-up">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                              <br><br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                          </div>
 
                          <div class="about-image" data-aos="fade-up" data-aos-delay="200">
@@ -327,16 +327,6 @@
           <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
             <p class="copyright-text">Copyright &copy; 2020 Your Company
             <br>
-            <a rel="nofollow noopener" href="https://templatemo.com">Design: TemplateMo</a></p>
-          </div>
-
-          <div class="col-lg-4 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
-            
-            <ul class="footer-link">
-              <li><a href="#">Stories</a></li>
-              <li><a href="#">Work with us</a></li>
-              <li><a href="#">Privacy</a></li>
-            </ul>
           </div>
 
           <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
