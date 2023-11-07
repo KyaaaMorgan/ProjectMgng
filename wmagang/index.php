@@ -24,6 +24,10 @@
 <div class="loading-screen">
      <div class="loader"></div>
 </div>
+<div id="floating-button" class="hidden">
+     <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</div>
+
      <!-- MENU BAR -->
           <!-- , ISI,Layanan(Dropdown), Zona Integritas, UNDUHAN-->
     <nav class="navbar navbar-expand-lg">
@@ -350,7 +354,7 @@
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
-     <script src="js/transition.js"></script>
+     <script src="js/transisi.js"></script>
      <script src="js/loader.js"></script>
 
 </body>

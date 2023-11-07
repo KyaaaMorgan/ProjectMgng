@@ -206,14 +206,32 @@ border-color: transparent;
 .custom-bttn.bttn-bg {
   background: var(--white-color);
   color: var(--dark-color);
-  border: 2px solid var(--primary-color);
-  transition: all 0.1s ease-in-out;
+  border: 2.5px solid var(--primary-color);
+  transition: all 0.1s ease;
 }
 
 .custom-bttn.bttn-bg:hover {
   background-color: var(--menu-bg);
   color: var(--white-color);
   border-color: transparent;
+}
+
+#floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  padding-bottom: 7px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 4px;
+  border-radius: var(--border-radius-large);
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  text-align: center;
 }
 
 /*---------------------------------------
@@ -491,7 +509,7 @@ overflow: hidden;
 }
 
 .hero-bg {
-background: linear-gradient(to top right ,var(--menu-bg),var(--green));;
+background: linear-gradient(to top right ,var(--menu-bg),var(--green));
 }
 
 .hero-image {
