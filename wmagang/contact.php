@@ -54,7 +54,7 @@
                         </ul>
                         </li>
                         <li><a href="mall.html">Mall</a></li>
-                        <li><a href="#">Industri Kecil Menengah</a></li>
+                        <li><a href="ikm.html">Industri Kecil Menengah</a></li>
                  </ul>
                  </li>
                     <li class="nav-item">
@@ -62,10 +62,10 @@
                         <ul class="isi-dropdown">
                          <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
                          <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
-                         <li><a href="#">Legalitas Merk</a></li>
-					<li><a href="#">Sertifikasi Halal</a></li>
-					<li><a href="#">Sinas</a></li>
-                         <li><a href="#">Tera/Tera Ulang</a></li>
+                         <li><a href="merk.html">Legalitas Merk</a></li>
+					<li><a href="halal.html">Sertifikasi Halal</a></li>
+					<li><a href="sinas.html">Sinas</a></li>
+                         <li><a href="tera.html">Tera/Tera Ulang</a></li>
 				     </ul>
                     </li>
                     <li class="nav-item">
@@ -178,16 +178,16 @@
           </div>
 
           <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
-            <h4 class="my-4">Our Studio</h4>
+            <h4 class="my-4">Kantor Kami</h4>
 
             <p class="mb-1">
               <i class="fa fa-home mr-2 footer-icon"></i> 
-              Av. Lúcio Costa - Barra da Tijuca, Rio de Janeiro - RJ, Brazil
+              Jl. Penanggungan NO. 7, Bandar Lor, Kec. Mojoroto, Kota Kediri, Jawa Timur
             </p>
           </div>
 
           <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
-            <p class="copyright-text">Copyright &copy; 2020 Your Company
+            <p class="copyright-text">Copyright &copy; 2023 DISPERDAGIN
             <br>
             <a rel="nofollow noopener" href="https://templatemo.com">Design: TemplateMo</a></p>
           </div>
