@@ -206,32 +206,14 @@ border-color: transparent;
 .custom-bttn.bttn-bg {
   background: var(--white-color);
   color: var(--dark-color);
-  border: 2.5px solid var(--primary-color);
-  transition: all 0.1s ease;
+  border: 2px solid var(--primary-color);
+  transition: all 0.1s ease-in-out;
 }
 
 .custom-bttn.bttn-bg:hover {
   background-color: var(--menu-bg);
   color: var(--white-color);
   border-color: transparent;
-}
-
-#floating-button {
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  background-color: var(--secondary-color);
-  color: #fff;
-  border: none;
-  padding-bottom: 7px;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 4px;
-  border-radius: var(--border-radius-large);
-  cursor: pointer;
-  display: none;
-  z-index: 1000;
-  text-align: center;
 }
 
 /*---------------------------------------
@@ -296,6 +278,7 @@ top: 0;
 right: 0;
 left: 0;
 padding: 1.5em;
+
 }
 
 .navbar-brand {
@@ -312,11 +295,22 @@ background-color: rgb(34, 141, 159);
 transition: all .5s ease;
 }
 
+.nav-item {
+  position: relative;
+}
+
 .nav-item:hover .isi-dropdown
 {
   animation: appear 0.3s ease-in-out;
   display: block;
 }
+.nav-item .nav-link {
+  padding: 0 10px;
+ }
+ 
+ .isi-dropdown:hover .isi-dropdown-menu {
+  display: block;
+ }
 
 @keyframes appear
 {
@@ -343,52 +337,225 @@ transition: all .5s ease;
     opacity: 0;
   }
 }
-  .isi-dropdown 
-	{
-    list-style-type: none;
-		position: absolute;
-		display: none;
-    padding: 0 !important; 
-    line-height: 30px;
-		background-color: rgba(0, 0, 0, 0.555);
-    border-radius: 4px;
-	}
-    .isi-dropdown a {
-		color: #ffffff !important;
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    transition: all 0.3s ease-in-out;
-	}
-     .isi-dropdown a:hover 
-	{
-		color: var(--secondary-color) !important;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.777);
-    border-radius: 4px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
-	}
-    .isi-dropdown .down {
-        display: none;
-        right: -48%;
-        top: 25%;
-        list-style-type: none;
-        position: absolute;
-        display: none;
-        padding: 0 !important; 
-        line-height: 30px;
-        background-color: rgba(0, 0, 0, 0.555);
-        border-radius: 4px;
-        z-index: 1;
-    }
-    #minimarket:hover .down {
-      display: block;
+
+.isi-dropdown {
+  list-style-type: none;
+  position: absolute;
+  display: none;
+  padding: 0;
+  line-height: 30px;
+  background-color: rgba(0, 0, 0, 0.555);
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.isi-dropdown li {
+  padding: 8px;
+}
+
+.isi-dropdown li a {
+  color: #ffffff !important;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.isi-dropdown li a:hover {
+  color: var(--secondary-color) !important;
+  background-color: rgba(0, 0, 0, 0.777);
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.isi-dropdown .down {
+  list-style-type: none;
+  position: absolute;
+  display: none;
+  padding: 0;
+  line-height: 30px;
+  background-color: rgba(0, 0, 0, 0.555);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+#minimarket:hover .isi-dropdown .down {
+  display: block;
+}
+/* Gaya untuk dropdown isi-drop */
+.isi-drop {
+  display: none;
+  position: static;
+  background-color: rgba(0, 0, 0, 0.555);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+
+
+/* Gaya untuk tautan yang menunjukkan dropdown */
+#minimarket-dropdown-toggle:hover + .isi-drop {
+  display: block;
+}
+
+/* Gaya tambahan untuk memperbaiki tata letak dropdown */
+.isi-dropdown,
+.isi-drop {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.isi-drop li {
+  padding: 10px;
+}
+
+/* Mengatur posisi dropdown di sebelah tautan */
+#minimarket-dropdown-toggle + .isi-drop {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.isi-dropdown.down.active {
+  display: block;
+}
+
+.isi-dropdown-menu {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.555);
+  border-radius: 4px;
+  z-index: 2; /* Sesuaikan nilai z-index sesuai kebutuhan */
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    padding: 1em;
   }
+
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  .nav-item {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: inline-block;
+    margin: 0.5em 0;
+    padding: 0.2em;
+  }
+
+  .isi-dropdown {
+    position: static;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.555);
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .isi-dropdown.active {
+    display: block;
+  }
+
+  .isi-dropdown li {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .nav-item:hover .isi-dropdown {
+    display: block;
+  }
+
+  #minimarket:hover .isi-dropdown .down {
+    display: none;
+  }
+  .isi-dropdown.down.active {
+    display: block;
+}
+
+.isi-dropdown-menu {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.555);
+    border-radius: 4px;
+    z-index: 2; /* Sesuaikan nilai z-index sesuai kebutuhan */
+}
+.isi-drop {
+  display: none;
+  position: static;
+  background-color: rgba(0, 0, 0, 0.555);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+}
+@media screen and (max-width: 991px) {
+  .navbar {
+    padding: 1em;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  .nav-item {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: inline-block;
+    margin: 0.5em 0;
+    padding: 0.2em;
+  }
+
+  .isi-dropdown {
+    position: static;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.555);
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .isi-dropdown.active {
+    display: block;
+  }
+
+  .isi-dropdown li {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .nav-item:hover .isi-dropdown {
+    display: block;
+  }
+
+  #minimarket:hover .isi-drop {
+    display: none;
+  }
+  .isi-drop.active {
+    display: block;
+}
+
+.isi-dropdown-menu {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.555);
+    border-radius: 4px;
+    z-index: 2; /* Sesuaikan nilai z-index sesuai kebutuhan */
+}
+.isi-drop {
+  display: none;
+  position: static;
+  background-color: rgba(0, 0, 0, 0.555);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+}
+
   
 .nav-link {
 display: inline-block;
@@ -433,7 +600,7 @@ background: none;
 
 .navbar-toggler {
 border: 0;
-padding: 0;
+padding: 0.2em 0.5em;
 cursor: pointer;
 margin: 0 10px 0 0;
 width: 30px;
@@ -509,7 +676,7 @@ overflow: hidden;
 }
 
 .hero-bg {
-background: linear-gradient(to top right ,var(--menu-bg),var(--green));
+background: linear-gradient(to top right ,var(--menu-bg),var(--green));;
 }
 
 .hero-image {
@@ -531,6 +698,7 @@ top: 2em;
 position: relative;
 width: 701px;
 height: 601px;
+overflow: hidden;
 }
 
 .project-wrapper img {
@@ -813,6 +981,7 @@ text-align: center;
 @media screen and (max-width: 991px) {
 
 .hero {
+  padding: 3em 0;
   padding-top: 14em;
 }
 
@@ -879,5 +1048,4 @@ h3 {
   margin-left: 0;
 }
 }
-
 
