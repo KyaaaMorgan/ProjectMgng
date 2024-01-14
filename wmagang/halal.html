@@ -76,14 +76,14 @@
                         </ul>
                         </li>
                         <li><a href="mall.html">Mall</a></li>
-                        <li><a href="ikm.html">Industri Kecil Menengah</a></li>
+                        <li><a href="#">Industri Kecil Menengah</a></li>
                  </ul>
                  </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link" >Layanan</a>
                         <ul class="isi-dropdown">
                          <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
-                         <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
+                        <!-- <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li> -->
                          <li><a href="merk.html">Legalitas Merk</a></li>
 					<li><a href="halal.html">Sertifikasi Halal</a></li>
 					<li><a href="sinas.html">Sinas</a></li>
@@ -110,13 +110,13 @@
     <section class="testimonial section-padding">
         <div class="container">
             <div class="row">
-                 <div class="col-lg-6 col-md-7 col-12">
+              <div class="col-lg-6 col-md-7 col-12" style="height: 100%; background-color: #b1afafbd; border-radius: 10px; padding: 10px; border: 5px solid #ffffff;">
                    <h1> <strong class="gradient-text" data-aos="fade-up" data-aos-delay="100">Panduan daftar sertifikat Halal</strong></h1>
 
                    
 
                    <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Berikut adalah tata cara Pendaftaran Sertifikat Halal</h3>
-                   <p class="mb-4" data-aos="fade-up" data-aos-delay="300">
+                   <p class="mb-4" data-aos="fade-up" data-aos-delay="300" style="color: #ffffff;">
                     Persyaratan :</br>
                     1. NIB RBA (KBLI sesuai produkusaha)</br>
                     2. Fotocopy KTP pemilik usaha dan Penyelia Halal (pengawas proses produksi)</br>
@@ -127,12 +127,16 @@
                     7. Bahan selain dari bahan alami wajib menggunakan bahan yg berlabel halal (yg wajib berlabel halal seperti, tepung, gula, pewarna, pengembang, perisa, garam, dan bahan tambahan pengan lainnya).</br>
                     8. Nomor whatsapp aktif untuk berkomunikasi dengan pendamping</p></br>
 
-                    <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Untuk Informasi Lebih Lanjut Hubungi Nomer Berikut: </h3>
+                    <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Untuk Informasi Lebih Lanjut Hubungi Nomor Berikut:</br> (NOMOR WA Penyelia)</h3>
 
 
                    <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Unduh Panduan Lengkap Pendaftaran Sertifikat Halal</h3>
                    <a href="#" class="custom-bttn bttn-bg btn mt-2" data-aos="fade-up" data-aos-delay="300">Unduh</a>
                  </div>
+                 <div class="col-lg-6 col-md-7 col-12" style="height: 100%; background-color: #b1afafbd; border-radius: 10px; padding: 10px; border: 5px solid #ffffff;">
+                  <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Langkah-langkah Registrasi</h3>
+                  <img src="images/flow halal.png" alt="flow" style="height: auto; max-width: 100%; display: block; margin: 0 auto;" data-aos="fade-up" data-aos-delay="300">
+                </div>
             </div>
     </section>
 
@@ -164,16 +168,16 @@
             </div>
   
             <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
-              <h4 class="my-4">Kantor Kami</h4>
+              <h4 class="my-4">Our Studio</h4>
   
               <p class="mb-1">
                 <i class="fa fa-home mr-2 footer-icon"></i> 
-                Jl. Penanggungan NO. 7, Bandar Lor, Kec. Mojoroto, Kota Kediri, Jawa Timur
+                Av. Lúcio Costa - Barra da Tijuca, Rio de Janeiro - RJ, Brazil
               </p>
             </div>
   
             <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
-              <p class="copyright-text">Copyright &copy; 2023 DISPERDAGIN
+              <p class="copyright-text">Copyright &copy; 2020 Your Company
               <br>
               <a rel="nofollow noopener" href="https://templatemo.com">Design: TemplateMo</a></p>
             </div>
@@ -208,6 +212,31 @@
      <script src="js/custom.js"></script>
      <script src="js/transition.js"></script>
      <script src="js/loader.js"></script>
+
+     <script>
+      document.addEventListener('DOMContentLoaded', function () {
+           // Tombol toggle dropdown minimarket
+           var minimarketToggle = document.getElementById('minimarket-dropdown-toggle');
+           // Dropdown minimarket
+           var minimarketDropdown = document.getElementById('minimarket-dropdown');
+      
+           // Tampilkan dropdown minimarket ketika tombol toggle diklik
+           minimarketToggle.addEventListener('click', function () {
+               if (minimarketDropdown.style.display === 'none' || minimarketDropdown.style.display === '') {
+                   minimarketDropdown.style.display = 'block';
+               } else {
+                   minimarketDropdown.style.display = 'none';
+               }
+           });
+      
+           // Sembunyikan dropdown minimarket saat klik di luar dropdown
+           document.addEventListener('click', function (event) {
+               var targetElement = event.target;
+               if (targetElement !== minimarketToggle && targetElement !== minimarketDropdown) {
+                   minimarketDropdown.style.display = 'none';
+               }
+           });
+       });</script>
 
 </body>
 </html>

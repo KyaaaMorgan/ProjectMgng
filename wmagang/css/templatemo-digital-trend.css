@@ -390,7 +390,48 @@ transition: all .5s ease;
   
 }
 
+.scroll-up-icon {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  background-color: var(--gold);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: none;
+}
 
+.scroll-up-icon:hover {
+  background-color: #f0f0f0;
+}
+
+.fa-eye{
+  color: white;
+}
+
+.fa-eye-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color:  rgb(119, 119, 119);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fa-eye-icon:hover {
+  background-color: #f0f0f0;
+}
+
+.fa-eye-icon i,
+    .scroll-up-icon i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 80%;
+    }
 
 /* Gaya untuk tautan yang menunjukkan dropdown */
 #minimarket-dropdown-toggle:hover + .isi-drop {
@@ -414,6 +455,20 @@ transition: all .5s ease;
   position: absolute;
   top: 100%;
   left: 0;
+}
+
+#minimarket-dropdown {
+  display: none;
+     position: absolute;
+     background-color: rgba(0, 0, 0, 0.555);
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+     z-index: 1;
+     right: 0;
+     top: 0;
+}
+
+#minimarket-dropdown li {
+  display: block;
 }
 
 .isi-dropdown.down.active {
@@ -528,7 +583,7 @@ transition: all .5s ease;
     white-space: normal;
     text-align: center;
   }
-
+  
   .nav-item:hover .isi-dropdown {
     display: block;
   }
@@ -672,7 +727,7 @@ top: 8px;
 .hero {
 position: relative;
 padding: 3em 0;
-overflow: hidden;
+
 }
 
 .hero-bg {
@@ -698,7 +753,7 @@ top: 2em;
 position: relative;
 width: 701px;
 height: 601px;
-overflow: hidden;
+
 }
 
 .project-wrapper img {

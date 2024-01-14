@@ -1,641 +1,890 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <title>DISPERDAGIN | Dinas Perdagangan Dan Industri</title>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>DISPERDAGIN | Dinas Perdagangan Dan Industri</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <!-- Tautan ke file CSS -->
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/aos.css">
-     <link rel="stylesheet" href="css/owl.carousel.min.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-     <link rel="shortcut icon" href="images/lpicon2.png">
+  <!-- Tautan ke file CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="shortcut icon" href="images/lpicon2.png">
 
-     <!-- CSS utama Anda -->
-     <link rel="stylesheet" href="css/templatemo-digital-trend.css">
+  <!-- CSS utama Anda -->
+  <link rel="stylesheet" href="css/templatemo-digital-trend.css">
 
-     <!-- Tautan ke Leaflet CSS -->
-     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <!-- Tautan ke Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
-     <!-- Tautan ke Leaflet dan Google Maps JavaScript -->
-     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=initMap" defer></script>-->
+  <!-- Tautan ke Leaflet dan Google Maps JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=initMap" defer></script>-->
 
-     <style>
-        #map, #mapkota,#mappesantren {
-            width: 100%;
-            height: 500px;
-            top: 45px;
-            margin-bottom: 25px;
-        }
+  <style>
+    #map,
+    #mapkota,
+    #mappesantren {
+      width: 100%;
+      height: 500px;
+      top: 45px;
+      margin-bottom: 25px;
+    }
 
-        #mojoroto, #pesantren, #kota {
-            display: none;
-        }
-     </style>
+    #mojoroto,
+    #pesantren,
+    #kota {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="loading-screen">
-     <div class="loader"></div>
-</div>
-     <!-- MENU BAR -->
-          <!-- , ISI,Layanan(Dropdown), Zona Integritas, UNDUHAN-->
-    <nav class="navbar navbar-expand-lg">
-        
-            <a href="index.php">
-               <div class="logo">
-                    <img src="images/dp1.png" alt="logo" style="height: 70px;">
-               </div>
-            </a>
+  <div class="loading-screen">
+    <div class="loader"></div>
+  </div>
+  <!-- MENU BAR -->
+  <!-- , ISI,Layanan(Dropdown), Zona Integritas, UNDUHAN-->
+  <nav class="navbar navbar-expand-lg">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <a href="index.php">
+      <div class="logo">
+        <img src="images/dp1.png" alt="logo" style="height: 70px;">
+      </div>
+    </a>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="index.php" class="nav-link smoothScroll" >Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                         <a href="#project" class="nav-link smoothScroll" >Berita</a>
-                     </li> 
-                     <li class="nav-item">
-                       <a href="#" class="nav-link" >Informasi</a>
-                       <ul class="isi-dropdown">
-                       <li><a href="pasar.html">Pasar</a></li>
-                       <li id="minimarket"><a href="#">Minimarket</a>
-                        <ul class="down">
-                           <li><a href="indomaret.html">Indomaret</a></li>
-                           <li><a href="alfamart.html">Alfamart</a></li>
-                        </ul>
-                        </li>
-                        <li><a href="mall.html">Mall</a></li>
-                        <li><a href="ikm.html">Industri Kecil Menengah</a></li>
-                 </ul>
-                 </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" >Layanan</a>
-                        <ul class="isi-dropdown">
-                         <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
-                         <li><a href="minhol.html">Izin Tempat Penjualan Minuman Beralkohol</a></li>
-                         <li><a href="merk.html">Legalitas Merk</a></li>
-					<li><a href="halal.html">Sertifikasi Halal</a></li>
-					<li><a href="sinas.html">Sinas</a></li>
-                         <li><a href="tera.html">Tera/Tera Ulang</a></li>
-				     </ul>
-                    </li>
-                    <li class="nav-item">
-                         <a href="https://pusakaumkm.id/home/" class="nav-link" target="_blank">Produk Unggulan</a>
-                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" >Zona Integritas</a>
-                    </li>
-                    <li class="nav-item">
-                         <a href="#" class="nav-link smoothScroll" >Unduhan</a>
-                     </li>
-                     <li class="nav-item">
-                         <a href="contact.php" class="nav-link contact" >Kontak</a>
-                     </li>
-                </ul>
-            </div>
-        
-    </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <section class="testimonial section-padding">
-        <div class="container">
-             <div class="row">
-                  <div class="col-lg-6 col-md-7 col-12">
-                    <h1> <strong class="gradient-text" data-aos="fade-up" data-aos-delay="100">Lokasi Industri Kecil Menengah Kota Kediri</strong></h1>
-
-                    <div class="quote" data-aos="fade-up" data-aos-delay="200"></div>
-
-                    <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Klik Menu dibawah untuk Menampilkan Lokasi</h3>
-                  </div>
-             </div>
-             <a onclick="show('mojoroto')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up" data-aos-delay="300">Mojoroto</a>
-             <a onclick="show('pesantren')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up" data-aos-delay="300">Pesantren</a>
-             <a onclick="show('kota')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up" data-aos-delay="300">Kota</a>
-             <!--Kecamatan Mojoroto-->
-             <div id="mojoroto">
-              <script>
-                function dummy() {}
-                window.dummy=dummy;
-                </script>
-                
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=dummy"></script>
-              <div id="map"></div>
-    <script>
-      function initMapmojoroto() {
-        // Inisialisasi peta dengan lokasi awal yang ditentukan
-        var initLocation = { lat: -7.804341023077927, lng: 111.99901874589823 };
-        var map = new google.maps.Map(document.getElementById("map"), {
-          center: initLocation,
-          zoom: 13,
-        });
-
-        // Array objek dengan informasi marker
-        var marker = [
-        {
-            position: { lat: -7.831177, lng: 111.987017},
-            title: "Shakila food",
-          },
-        {
-            position: { lat: -7.8482474, lng: 112.033184},
-            title: "ARAFAH KURMA & SEKAR KUNYIT",
-          },
-        {
-            position: { lat: -7.845606, lng: 112.034953},
-            title: "ROKED SOAP",
-          },
-        {
-            position: { lat: -7.8394304, lng: 112.0175306},
-            title: "Kimie Lidi",
-          },
-        {
-            position: { lat: -7.845590, lng: 112.037581},
-            title: "NR collection",
-          },
-        {
-            position: { lat: -7.8238755, lng: 111.9909982},
-            title: "819 KITCHEN",
-          },
-        {
-            position: { lat: -7.810645, lng: 111.9911002},
-            title: "BUMBU MASAK TE’MAH",
-          },
-         {
-            position: { lat: -7.817072, lng: 112.022623},
-            title: "Kaos Gaplek",
-          },
-           {
-            position: { lat: -7.830191, lng: 112.030756},
-            title: "COKELAT TAHU WIJAYA KEMBAR",
-          },
-        ];
-
-        // Loop untuk membuat dan menambahkan marker ke peta
-        for   (var markerInf of marker) {
-          var marker = new google.maps.Marker({
-            position: markerInf.position,
-            map: map,
-            title: markerInf.title,
-          });
-
-          // Tambahkan event listener untuk menangani klik marker
-          marker.addListener("click", () => {
-            if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(function (position) {
-                // Dapatkan koordinat lokasi pengguna
-                var userLoc = {
-                  lat: position.coords.latitude,
-                  lng: position.coords.longitude,
-                };
-
-                // Dapatkan koordinat marker yang diklik
-                var destinasi = marker.getPosition().toUrlValue();
-
-                // Buka Google Maps dengan arah dari lokasi pengguna ke tujuan
-                window.open(
-                  `https://www.google.com/maps/dir/${userLoc.lat},${userLoc.lng}/${destinasi}`
-                );
-              });
-            } else {
-              alert("Geolokasi tidak didukung oleh peramban Anda.");
-            }
-          });
-        }
-      }
-      google.maps.event.addDomListener(window, "load", initMapmojoroto);
-    </script>
-    </br>
-  </br>
-    <h3>List Alfamart Kecamatan Mojoroto</h3>
-    <table class="table table-striped table-bordered table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">No.</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Alamat</th>
-      <th scope="col">Kelurahan</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Alfamart Tamanan</td>
-      <td>Jl. Semeru</td>
-      <td>Campurejo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Alfamart Kawi</td>
-      <td>Jl. Kawi No. 27D</td>
-      <td>Mojoroto</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Alfamart Mojoroto</td>
-      <td>Jl. Jaksa Agung Suprapto No. 11</td>
-      <td>Mojoroto</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Alfamart Agus Salim</td>
-      <td>Jl. KH Agus Salim No. 6</td>
-      <td>Bandar Kidul</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Alfamart Jl. Mastrip</td>
-      <td>Jl. Mastrip Ruko Rege</td>
-      <td>Sukorame</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>Alfamart Dr. Sahardjo</td>
-      <td>Jl. Dr. Saharjo No. 3B</td>
-      <td>Campurejo]</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>Alfamart Mrican</td>
-      <td>Jl. Gatot Subroto No. 171</td>
-      <td>Mrican</td>
-    </tr>
-  </tbody>
-</table>
-             </div>
-
-             <!--Kecamatan Pesantren-->
-             <div id="pesantren">
-                <script>
-                  function dummy2() {}
-                  window.dummy2=dummy2;
-                  </script>
-                  
-                  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=dummy2"></script>
-                <div id="mappesantren"></div>
-      <script>
-        function initMappesantren() {
-          // Inisialisasi peta dengan lokasi awal yang ditentukan
-          var initialLocation1 = { lat: -7.829347670572409, lng: 112.02491041750754 };
-          var mappesantren = new google.maps.Map(document.getElementById("mappesantren"), {
-            center: initialLocation1,
-            zoom: 13.5,
-          });
-  
-          // Array objek dengan informasi marker
-          var markerpesantren = [
-          {
-            position: { lat: -7.830758615391627, lng: 112.04587058660734},
-            title: "Alfamart Mauni",
-        },
-        {
-            position: { lat: -7.832780558736911, lng: 112.05167380147536},
-            title: "Alfamart Imam Bakri",
-        },
-        {
-            position: { lat: -7.863872094152294, lng: 112.02859750080779},
-            title: "Alfamart Kapten Tendean",
-        },
-          ];
-  
-          // Loop untuk membuat dan menambahkan marker ke peta
-          for   (var markerInfo1 of markerpesantren) {
-            var marker = new google.maps.Marker({
-              position: markerInfo1.position,
-              map: mappesantren,
-              title: markerInfo1.title,
-            });
-  
-            // Tambahkan event listener untuk menangani klik marker
-            marker.addListener("click", () => {
-              if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                  // Dapatkan koordinat lokasi pengguna
-                  var userLocation = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude,
-                  };
-  
-                  // Dapatkan koordinat marker yang diklik
-                  var destination = marker.getPosition().toUrlValue();
-  
-                  // Buka Google Maps dengan arah dari lokasi pengguna ke tujuan
-                  window.open(
-                    `https://www.google.com/maps/dir/${userLocation.lat},${userLocation.lng}/${destination}`
-                  );
-                });
-              } else {
-                alert("Geolokasi tidak didukung oleh peramban Anda.");
-              }
-            });
-          }
-        }
-        google.maps.event.addDomListener(window, "load", initMappesantren);
-      </script>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw"></script>
-    </br>
-  </br>
-      <h3>List Alfamart Kecamatan Pesantren</h3>
-      <table class="table table-striped table-bordered table-hover">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">No.</th>
-        <th scope="col">Nama</th>
-        <th scope="col">Alamat</th>
-        <th scope="col">Kelurahan</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Alfamart Mauni</td>
-        <td>Jl. Mauni No. 87</td>
-        <td>Bangsal</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Alfamart Imam Bakri</td>
-        <td>Jl. Brigjend Pol. IBH Pranoto</td>
-        <td>Pesantren</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Alfamart Kapten Tendean</td>
-        <td>Jl. Kapten Tendean No. 400</td>
-        <td>Blabak</td>
-      </tr>
-    </tbody>
-  </table>         
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="index.php" class="nav-link smoothScroll">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a href="#project" class="nav-link smoothScroll">Berita</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Informasi</a>
+          <ul class="isi-dropdown">
+            <li><a href="pasar.html">Pasar</a></li>
+            <li id="minimarket"><a href="#">Minimarket</a>
+              <ul class="down">
+                <li><a href="indomaret.html">Indomaret</a></li>
+                <li><a href="alfamart.html">Alfamart</a></li>
+              </ul>
+            </li>
+            <li><a href="mall.html">Mall</a></li>
+            <li><a href="ikm.html">Industri Kecil Menengah</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Layanan</a>
+          <ul class="isi-dropdown">
+            <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
+            <!-- <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li> -->
+            <li><a href="merk.html">Legalitas Merk</a></li>
+            <li><a href="halal.html">Sertifikasi Halal</a></li>
+            <li><a href="sinas.html">Sinas</a></li>
+            <li><a href="tera.html">Tera/Tera Ulang</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="https://pusakaumkm.id/home/" class="nav-link" target="_blank">Produk Unggulan</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Zona Integritas</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link smoothScroll">Unduhan</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.php" class="nav-link contact">Kontak</a>
+        </li>
+      </ul>
     </div>
 
-              <!--Kecamatan Kota-->
-             <div id="kota">
-              <script>
-                function dummy1() {}
-                window.dummy1=dummy1;
-                </script>
-                
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=dummy1"></script>
-              <div id="mapkota"></div>
-    <script>
-      function initMapkota() {
-        // Inisialisasi peta dengan lokasi awal yang ditentukan
-        var initialLocation = { lat: -7.829347670572409, lng: 112.02491041750754 };
-        var mapkota = new google.maps.Map(document.getElementById("mapkota"), {
-          center: initialLocation,
-          zoom: 13.5,
-        });
+  </nav>
 
-        // Array objek dengan informasi marker
-        var markerkota = [
-        {
-            position: { lat: -7.843077806481376, lng: 112.00860322252969},
-            title: "Alfamart Urip Sumoharjo",
-          },
-        {
-            position: { lat: -7.843222901822769, lng: 112.02498552490748},
-            title: "Alfamart Super Semar",
-          },
-        {
-            position: { lat: -7.8456661805845345, lng: 112.03258039289383},
-            title: "Alfamart Betet Bawang",
-          },
-        {
-            position: { lat: -7.834670758007238, lng: 112.00947203910683},
-            title: "Alfamart Ngronggo",
-          },
-        {
-            position: { lat: -7.828038238957005, lng: 112.01705641802718},
-            title: "Alfamart Kilisuci",
-          },
-        {
-            position: { lat: -7.823975050613908, lng: 112.02842289874994},
-            title: "Alfamart Letjen Sutoyo",
-          },
-        {
-            position: { lat: -7.820296649438336, lng: 112.02795016091359},
-            title: "Alfamart Letjen Suprapto",
-          },
-        {
-            position: { lat: -7.803839706254827, lng: 112.0087671601588},
-            title: "Alfamart Mayjend Sungkono",
-          },
-        {
-            position: { lat: -7.820275621759995, lng: 112.01710865918066},
-            title: "Alfamart Patiunus",
-          },
-        ];
+  <section class="testimonial section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-7 col-12">
+          <h1> <strong class="gradient-text" data-aos="fade-up" data-aos-delay="100">Lokasi Industri Kecil Menengah Kota
+              Kediri</strong></h1>
 
-        // Loop untuk membuat dan menambahkan marker ke peta
-        for   (var markerInfo of markerkota) {
-          var marker = new google.maps.Marker({
-            position: markerInfo.position,
-            map: mapkota,
-            title: markerInfo.title,
-          });
+          <div class="quote" data-aos="fade-up" data-aos-delay="200"></div>
 
-          // Tambahkan event listener untuk menangani klik marker
-          marker.addListener("click", () => {
-            if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(function (position) {
-                // Dapatkan koordinat lokasi pengguna
-                var userLocation = {
-                  lat: position.coords.latitude,
-                  lng: position.coords.longitude,
-                };
-
-                // Dapatkan koordinat marker yang diklik
-                var destination = marker.getPosition().toUrlValue();
-
-                // Buka Google Maps dengan arah dari lokasi pengguna ke tujuan
-                window.open(
-                  `https://www.google.com/maps/dir/${userLocation.lat},${userLocation.lng}/${destination}`
-                );
-              });
-            } else {
-              alert("Geolokasi tidak didukung oleh peramban Anda.");
-            }
-          });
-        }
-      }
-      google.maps.event.addDomListener(window, "load", initMapkota);
-    </script>
-    </br>
-    </br>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw"></script>
-    <h3>List Alfamart Kecamatan Kota</h3>
-    <table class="table table-striped table-bordered table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">No.</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Alamat</th>
-      <th scope="col">Kelurahan</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Alfamart Urip Sumoharjo</td>
-      <td>Jl. Urip Sumoharjo No. 227</td>
-      <td>Ngronggo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Alfamart Super Semar</td>
-      <td>Jl. Super Semar</td>
-      <td>Ngronggo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Alfamart Betet Bawang</td>
-      <td>Jl. Betet Bawang/td>
-      <td>Ngronggo</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Alfamart Ngronggo</td>
-      <td>Jl. Urip Sumoharjo No. 174</td>
-      <td>Ngronggo</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Alfamart Kilisuci</td>
-      <td>Jl. Kilisuci No. 72</td>
-      <td>Kampung Dalem</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>Alfamart Letjend Sutoyo</td>
-      <td>Jl. Letjend Sutoyo No. 48</td>
-      <td>Burengan</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>Alfamart Letjend Suprapto</td>
-      <td>Jl. Letjend Suprapto No. 39</td>
-      <td>Burengan</td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td>Alfamart Mayjend Sungkono</td>
-      <td>Jl. Mayjend Sungkono</td>
-      <td>Semampir</td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-      <td>Alfamart Patiunus</td>
-      <td>Jl. Patiunus No. 82</td>
-      <td>Jagalan</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-        </div>
-   </section>
-
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
-               <h1 class="text-white custom-color" data-aos="fade-up" data-aos-delay="100">
-                    Disperdagin 
-                    <strong class="gradient-text"><br>Kota Kediri</strong> 
-               </h1>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
-            <h4 class="my-4">Contact Info</h4>
-
-            <p class="mb-1">
-              <i class="fa fa-phone mr-2 footer-icon"></i> 
-              +99 080 070 4224
-            </p>
-
-            <p>
-              <a href="#">
-                <i class="fa fa-envelope mr-2 footer-icon"></i>
-                hello@company.com
-              </a>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
-            <h4 class="my-4">Kantor Kami</h4>
-
-            <p class="mb-1">
-              <i class="fa fa-home mr-2 footer-icon"></i> 
-              Jl. Penanggungan NO. 7, Bandar Lor, Kec. Mojoroto, Kota Kediri, Jawa Timur
-            </p>
-          </div>
-
-          <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
-            <p class="copyright-text">Copyright &copy; 2023 DISPERDAGIN
-            <br>
-            <a rel="nofollow noopener" href="https://templatemo.com">Design: TemplateMo</a></p>
-          </div>
-
-          <div class="col-lg-4 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
-            
-            <ul class="footer-link">
-              <li><a href="#">Stories</a></li>
-              <li><a href="#">Work with us</a></li>
-              <li><a href="#">Privacy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
-            <ul class="social-icon">
-              <li><a href="#" class="fa fa-instagram"></a></li>
-              <li><a href="#" class="fa fa-twitter"></a></li>
-              <li><a href="#" class="fa fa-dribbble"></a></li>
-              <li><a href="#" class="fa fa-behance"></a></li>
-            </ul>
-          </div>
-
+          <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Klik Menu dibawah untuk Menampilkan Lokasi</h3>
         </div>
       </div>
-    </footer>
+      <a onclick="show('mojoroto')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up"
+        data-aos-delay="300">Mojoroto</a>
+      <a onclick="show('pesantren')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up"
+        data-aos-delay="300">Pesantren</a>
+      <a onclick="show('kota')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up" data-aos-delay="300">Kota</a>
+      <!--Kecamatan Mojoroto-->
+      <div id="mojoroto">
+        <script>
+          function dummy() { }
+          window.dummy = dummy;
+        </script>
+
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=dummy"></script>
+        <div id="map"></div>
+        <script>
+          function initMapmojoroto() {
+            // Inisialisasi peta dengan lokasi awal yang ditentukan
+            var initLocation = { lat: -7.804341023077927, lng: 111.99901874589823 };
+            var map = new google.maps.Map(document.getElementById("map"), {
+              center: initLocation,
+              zoom: 13,
+            });
+
+            // Array objek dengan informasi marker
+            var marker = [
+              {
+                position: { lat: -7.831177, lng: 111.987017 },
+                title: "Shakila food",
+              },
+              {
+                position: { lat: -7.8482474, lng: 112.033184 },
+                title: "ARAFAH KURMA & SEKAR KUNYIT",
+              },
+              {
+                position: { lat: -7.845606, lng: 112.034953 },
+                title: "ROKED SOAP",
+              },
+              {
+                position: { lat: -7.8394304, lng: 112.0175306 },
+                title: "Kimie Lidi",
+              },
+              {
+                position: { lat: -7.845590, lng: 112.037581 },
+                title: "NR collection",
+              },
+              {
+                position: { lat: -7.8238755, lng: 111.9909982 },
+                title: "819 KITCHEN",
+              },
+              {
+                position: { lat: -7.810645, lng: 111.9911002 },
+                title: "BUMBU MASAK TE’MAH",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.830191, lng: 112.030756 },
+                title: "COKELAT TAHU WIJAYA KEMBAR",
+              },
+              {
+                position: { lat: -7.823549263225821, lng: 112.00636399492703 },
+                title: "CROVORY BUBUK REMPAH",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+              {
+                position: { lat: -7.817072, lng: 112.022623 },
+                title: "Kaos Gaplek",
+              },
+            ];
+
+            // Loop untuk membuat dan menambahkan marker ke peta
+            for (var markerInf of marker) {
+              var marker = new google.maps.Marker({
+                position: markerInf.position,
+                map: map,
+                title: markerInf.title,
+              });
+
+              // Tambahkan event listener untuk menangani klik marker
+              marker.addListener("click", () => {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(function (position) {
+                    // Dapatkan koordinat lokasi pengguna
+                    var userLoc = {
+                      lat: position.coords.latitude,
+                      lng: position.coords.longitude,
+                    };
+
+                    // Dapatkan koordinat marker yang diklik
+                    var destinasi = marker.getPosition().toUrlValue();
+
+                    // Buka Google Maps dengan arah dari lokasi pengguna ke tujuan
+                    window.open(
+                      `https://www.google.com/maps/dir/${userLoc.lat},${userLoc.lng}/${destinasi}`
+                    );
+                  });
+                } else {
+                  alert("Geolokasi tidak didukung oleh peramban Anda.");
+                }
+              });
+            }
+          }
+          google.maps.event.addDomListener(window, "load", initMapmojoroto);
+        </script>
+        </br>
+        </br>
+        <h3>List Industri Kecil Menengah Kecamatan Mojoroto</h3>
+        <table class="table table-striped table-bordered table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">Nama</th>
+              <th scope="col">Alamat</th>
+              <th scope="col">Kelurahan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Shakila food</td>
+              <td>Jln taman sari gang putih rt 3 rw 2</td>
+              <td>Tamanan</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Alfamart Kawi</td>
+              <td>Jl. Kawi No. 27D</td>
+              <td>Mojoroto</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>ARAFAH KURMA & SEKAR KUNYIT</td>
+              <td>Jln melati VI no 16 perumnas Ngronggo</td>
+              <td>Ngronggo</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>ROKED SOAP</td>
+              <td>Perum Cahaya Permata Blok 12 No.11</td>
+              <td>Bence</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Kimie Lidi</td>
+              <td>Perum ngronggo indah blok c no 4</td>
+              <td>Ngronggo</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>819 KITCHEN</td>
+              <td>Griya Lirboyo Harmoni A-11</td>
+              <td>Lirboyo</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>NR collection</td>
+              <td>Perumahan bence regency blok c18</td>
+              <td>Pakunden</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>BUMBU MASAK TE’MAH</td>
+              <td>Jl. Veteran Gg. II No.8</td>
+              <td>Sukorame</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>COKELAT TAHU WIJAYA KEMBAR</td>
+              <td>Tinalan Gg.IV Timur No.1</td>
+              <td>Tinalan</td>
+            </tr>
+            <tr>
+              <th scope="row">10</th>
+              <td>KAOS GAPLEK</td>
+              <td>Jl. Adi Sucipto No.54</td>
+              <td>Banjaran</td>
+            </tr>
+            <tr>
+              <th scope="row">11</th>
+              <td>CROVORY BUBUK REMPAH</td>
+              <td>Perumahan bence regency blok c18</td>
+              <td>Pakunden</td>
+            </tr>
+            <tr>
+              <th scope="row">12</th>
+              <td>CROVORY BUBUK REMPAH</td>
+              <td>Jl. KH. Wahid Hasyim Va / 6</td>
+              <td>Bandar Lor</td>
+            </tr>
+            <tr>
+              <th scope="row">13</th>
+              <td>KOPI PANDAWA</td>
+              <td>Jl. Raya Betet No.64</td>
+              <td>Betet</td>
+            </tr>
+            <tr>
+              <th scope="row">14</th>
+              <td>EXTRA JUICE</td>
+              <td>Jl. Pemuda No.26</td>
+              <td>Dandangan</td>
+            </tr>
+            <tr>
+              <th scope="row">15</th>
+              <td>OLABI</td>
+              <td>Jl. Tosaren III No.71 RT.06 RW.02</td>
+              <td>Tosaren</td>
+            </tr>
+            <tr>
+              <th scope="row">16</th>
+              <td>ELH COLLECTION</td>
+              <td>Perum Puri Kaliombo Jl. Damai Blok C-9 RT.04 RW.09</td>
+              <td>Kaliombo</td>
+            </tr>
+            <tr>
+              <th scope="row">17</th>
+              <td>SIRUP TRADISIONAL AL-HQ</td>
+              <td>Jl. Masjid Timur No.405</td>
+              <td>Banaran</td>
+            </tr>
+            <tr>
+              <th scope="row">18</th>
+              <td>ARRAYANA HONEY</td>
+              <td>Perum KBN Jl. Anggraini Raya No.7</td>
+              <td>Sukorame</td>
+            </tr>
+            <tr>
+              <th scope="row">19</th>
+              <td>BAKPIA ALMAIR</td>
+              <td>Jl. Panglima Polim No.72</td>
+              <td>Kemasan</td>
+            </tr>
+            <tr>
+              <th scope="row">20</th>
+              <td>AMIRA CRAFT BY SANTI</td>
+              <td>Jl. Letjen Sutoyo No.29</td>
+              <td>Burengan</td>
+            </tr>
+            <tr>
+              <th scope="row">21</th>
+              <td>Stik Tahu Sis</td>
+              <td>Tinalan gg.4 timur no.15B rt.02 rw.02</td>
+              <td>Tinalan</td>
+            </tr>
+            <tr>
+              <th scope="row">22</th>
+              <td>GALUH KADIRI</td>
+              <td>Perum Griya Intan Asri Blok A-14</td>
+              <td>Dermo</td>
+            </tr>
+            <tr>
+              <th scope="row">23</th>
+              <td>Pia 313</td>
+              <td>Jl. Pandean II/6</td>
+              <td>Setonopande</td>
+            </tr>
+            <tr>
+              <th scope="row">24</th>
+              <td>KRIPIK PISANG CALLISTA</td>
+              <td>KEL. BUJEL GG1 NO 14</td>
+              <td>Bujel</td>
+            </tr>
+            <tr>
+              <th scope="row">25</th>
+              <td>POISON WEARHOUSE</td>
+              <td>Jl. Sultan Agung no.71</td>
+              <td>Setonopande</td>
+            </tr>
+            <tr>
+              <th scope="row">26</th>
+              <td>SAMBEL PECEL ERVINA</td>
+              <td>Perumnas Ngronggo Jl. Kenongo VIII / 07</td>
+              <td>Ngronggo</td>
+            </tr>
+            <tr>
+              <th scope="row">27</th>
+              <td>PERCALES</td>
+              <td>Perumnas Ngronggo Jl. Dahlia 2 No.16</td>
+              <td>Ngronggo</td>
+            </tr>
+            <tr>
+              <th scope="row">28</th>
+              <td>BATIK WECONO ASRI</td>
+              <td>Jl. Dandangan I / 154</td>
+              <td>Dandangan</td>
+            </tr>
+            <tr>
+              <th scope="row">29</th>
+              <td>TENUN IKAT SEMPURNA 2</td>
+              <td>Jl. KH. Agus Salim VIII / 42-B</td>
+              <td>Bandar Kidul</td>
+            </tr>
+            <tr>
+              <th scope="row">30</th>
+              <td>TAHU MJS</td>
+              <td>Jl. Mawar, Lingk. Kleco</td>
+              <td>Jamsaren</td>
+            </tr>
+            <tr>
+              <th scope="row">31</th>
+              <td>SEMPRONG SEKARJOYO</td>
+              <td>Perum Wilis Indah I Jl. Wilis Mulya IV / 11</td>
+              <td>Pojok</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--Kecamatan Pesantren-->
+      <div id="pesantren">
+        <script>
+          function dummy2() { }
+          window.dummy2 = dummy2;
+        </script>
+
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=dummy2"></script>
+        <div id="mappesantren"></div>
+        <script>
+          function initMappesantren() {
+            // Inisialisasi peta dengan lokasi awal yang ditentukan
+            var initialLocation1 = { lat: -7.829347670572409, lng: 112.02491041750754 };
+            var mappesantren = new google.maps.Map(document.getElementById("mappesantren"), {
+              center: initialLocation1,
+              zoom: 13.5,
+            });
+
+            // Array objek dengan informasi marker
+            var markerpesantren = [
+              {
+                position: { lat: -7.830758615391627, lng: 112.04587058660734 },
+                title: "KOPIAH M. THOIB",
+              },
+              {
+                position: { lat: -7.832780558736911, lng: 112.05167380147536 },
+                title: "MARIAMA FROZEN FOOD",
+              },
+              {
+                position: { lat: -7.863872094152294, lng: 112.02859750080779 },
+                title: "SAMBEL PECEL BU I",
+              },
+            ];
+
+            // Loop untuk membuat dan menambahkan marker ke peta
+            for (var markerInfo1 of markerpesantren) {
+              var marker = new google.maps.Marker({
+                position: markerInfo1.position,
+                map: mappesantren,
+                title: markerInfo1.title,
+              });
+
+              // Tambahkan event listener untuk menangani klik marker
+              marker.addListener("click", () => {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(function (position) {
+                    // Dapatkan koordinat lokasi pengguna
+                    var userLocation = {
+                      lat: position.coords.latitude,
+                      lng: position.coords.longitude,
+                    };
+
+                    // Dapatkan koordinat marker yang diklik
+                    var destination = marker.getPosition().toUrlValue();
+
+                    // Buka Google Maps dengan arah dari lokasi pengguna ke tujuan
+                    window.open(
+                      `https://www.google.com/maps/dir/${userLocation.lat},${userLocation.lng}/${destination}`
+                    );
+                  });
+                } else {
+                  alert("Geolokasi tidak didukung oleh peramban Anda.");
+                }
+              });
+            }
+          }
+          google.maps.event.addDomListener(window, "load", initMappesantren);
+        </script>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw"></script>
+        </br>
+        </br>
+        <h3>List Industri Kecil Menengah Kecamatan Pesantren</h3>
+        <table class="table table-striped table-bordered table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">Nama</th>
+              <th scope="col">Alamat</th>
+              <th scope="col">Kelurahan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>KOPIAH M. THOIB</td>
+              <td>Jl. Mauni No. 87</td>
+              <td>Bangsal</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>MARIAMA FROZEN FOOD</td>
+              <td>Jl. Brigjend Pol. IBH Pranoto</td>
+              <td>Pesantren</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>SAMBEL PECEL BU I</td>
+              <td>Jl. Kapten Tendean No. 400</td>
+              <td>Blabak</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--Kecamatan Kota-->
+      <div id="kota">
+        <script>
+          function dummy1() { }
+          window.dummy1 = dummy1;
+        </script>
+
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=dummy1"></script>
+        <div id="mapkota"></div>
+        <script>
+          function initMapkota() {
+            // Inisialisasi peta dengan lokasi awal yang ditentukan
+            var initialLocation = { lat: -7.829347670572409, lng: 112.02491041750754 };
+            var mapkota = new google.maps.Map(document.getElementById("mapkota"), {
+              center: initialLocation,
+              zoom: 13.5,
+            });
+
+            // Array objek dengan informasi marker
+            var markerkota = [
+              {
+                position: { lat: -7.843077806481376, lng: 112.00860322252969 },
+                title: "Alfamart Urip Sumoharjo",
+              },
+              {
+                position: { lat: -7.843222901822769, lng: 112.02498552490748 },
+                title: "Alfamart Super Semar",
+              },
+              {
+                position: { lat: -7.8456661805845345, lng: 112.03258039289383 },
+                title: "Alfamart Betet Bawang",
+              },
+              {
+                position: { lat: -7.834670758007238, lng: 112.00947203910683 },
+                title: "Alfamart Ngronggo",
+              },
+              {
+                position: { lat: -7.828038238957005, lng: 112.01705641802718 },
+                title: "Alfamart Kilisuci",
+              },
+              {
+                position: { lat: -7.823975050613908, lng: 112.02842289874994 },
+                title: "Alfamart Letjen Sutoyo",
+              },
+              {
+                position: { lat: -7.820296649438336, lng: 112.02795016091359 },
+                title: "Alfamart Letjen Suprapto",
+              },
+              {
+                position: { lat: -7.803839706254827, lng: 112.0087671601588 },
+                title: "Alfamart Mayjend Sungkono",
+              },
+              {
+                position: { lat: -7.820275621759995, lng: 112.01710865918066 },
+                title: "Alfamart Patiunus",
+              },
+            ];
+
+            // Loop untuk membuat dan menambahkan marker ke peta
+            for (var markerInfo of markerkota) {
+              var marker = new google.maps.Marker({
+                position: markerInfo.position,
+                map: mapkota,
+                title: markerInfo.title,
+              });
+
+              // Tambahkan event listener untuk menangani klik marker
+              marker.addListener("click", () => {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(function (position) {
+                    // Dapatkan koordinat lokasi pengguna
+                    var userLocation = {
+                      lat: position.coords.latitude,
+                      lng: position.coords.longitude,
+                    };
+
+                    // Dapatkan koordinat marker yang diklik
+                    var destination = marker.getPosition().toUrlValue();
+
+                    // Buka Google Maps dengan arah dari lokasi pengguna ke tujuan
+                    window.open(
+                      `https://www.google.com/maps/dir/${userLocation.lat},${userLocation.lng}/${destination}`
+                    );
+                  });
+                } else {
+                  alert("Geolokasi tidak didukung oleh peramban Anda.");
+                }
+              });
+            }
+          }
+          google.maps.event.addDomListener(window, "load", initMapkota);
+        </script>
+        </br>
+        </br>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw"></script>
+        <h3>List Industri Kecil Menengah Kecamatan Kota</h3>
+        <table class="table table-striped table-bordered table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">Nama</th>
+              <th scope="col">Alamat</th>
+              <th scope="col">Kelurahan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>CHARGECITY</td>
+              <td>Jl. Urip Sumoharjo No. 227</td>
+              <td>Ngronggo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>TENUN IKAT SINAR BAROKAH</td>
+              <td>Jl. Super Semar</td>
+              <td>Ngronggo</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>PIE SUSU MUFFI</td>
+              <td>Jl. Betet Bawang/td>
+              <td>Ngronggo</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Kirani Craft</td>
+              <td>Jl. Urip Sumoharjo No. 174</td>
+              <td>Ngronggo</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>SAMBEL PECEL MBAH KENDHIL</td>
+              <td>Jl. Kilisuci No. 72</td>
+              <td>Kampung Dalem</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>ARTERI HANDYCRAFT & SOUVENIR</td>
+              <td>Jl. Letjend Sutoyo No. 48</td>
+              <td>Burengan</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>Alfamart Letjend Suprapto</td>
+              <td>Jl. Letjend Suprapto No. 39</td>
+              <td>Burengan</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>GETUK PISANG MADU MANIS 16</td>
+              <td>Jl. Mayjend Sungkono</td>
+              <td>Semampir</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>MIMIE FANCY</td>
+              <td>Jl. Patiunus No. 82</td>
+              <td>Jagalan</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
 
-     <!-- SCRIPTS -->
-     <script>
-      var currentlyVisible = null; 
-    
-      function show(id) {
-        var x = document.getElementById(id);
-        
-        if (currentlyVisible) {
-          currentlyVisible.style.display = "none";
-        }
-        
-        if (x.style.display === "none" || !x.style.display) {
-          x.style.display = "block";
-          currentlyVisible = x;
-        } else {
-          x.style.display = "none";
-          currentlyVisible = null;
-        }
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
+          <h1 class="text-white custom-color" data-aos="fade-up" data-aos-delay="100">
+            Disperdagin
+            <strong class="gradient-text"><br>Kota Kediri</strong>
+          </h1>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+          <h4 class="my-4">Contact Info</h4>
+
+          <p class="mb-1">
+            <i class="fa fa-phone mr-2 footer-icon"></i>
+            +99 080 070 4224
+          </p>
+
+          <p>
+            <a href="#">
+              <i class="fa fa-envelope mr-2 footer-icon"></i>
+              hello@company.com
+            </a>
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+          <h4 class="my-4">Our Studio</h4>
+
+          <p class="mb-1">
+            <i class="fa fa-home mr-2 footer-icon"></i>
+            Av. Lúcio Costa - Barra da Tijuca, Rio de Janeiro - RJ, Brazil
+          </p>
+        </div>
+
+        <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
+          <p class="copyright-text">Copyright &copy; 2020 Your Company
+            <br>
+            <a rel="nofollow noopener" href="https://templatemo.com">Design: TemplateMo</a>
+          </p>
+        </div>
+
+        <div class="col-lg-4 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+
+          <ul class="footer-link">
+            <li><a href="#">Stories</a></li>
+            <li><a href="#">Work with us</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+          <ul class="social-icon">
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-dribbble"></a></li>
+            <li><a href="#" class="fa fa-behance"></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- SCRIPTS -->
+  <script>
+    var currentlyVisible = null;
+
+    function show(id) {
+      var x = document.getElementById(id);
+
+      if (currentlyVisible) {
+        currentlyVisible.style.display = "none";
       }
-    </script>    
-     <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/aos.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
-     <script src="js/transition.js"></script>
-     <script src="js/loader.js"></script>
+
+      if (x.style.display === "none" || !x.style.display) {
+        x.style.display = "block";
+        currentlyVisible = x;
+      } else {
+        x.style.display = "none";
+        currentlyVisible = null;
+      }
+    }
+  </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/transition.js"></script>
+  <script src="js/loader.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+         // Tombol toggle dropdown minimarket
+         var minimarketToggle = document.getElementById('minimarket-dropdown-toggle');
+         // Dropdown minimarket
+         var minimarketDropdown = document.getElementById('minimarket-dropdown');
+    
+         // Tampilkan dropdown minimarket ketika tombol toggle diklik
+         minimarketToggle.addEventListener('click', function () {
+             if (minimarketDropdown.style.display === 'none' || minimarketDropdown.style.display === '') {
+                 minimarketDropdown.style.display = 'block';
+             } else {
+                 minimarketDropdown.style.display = 'none';
+             }
+         });
+    
+         // Sembunyikan dropdown minimarket saat klik di luar dropdown
+         document.addEventListener('click', function (event) {
+             var targetElement = event.target;
+             if (targetElement !== minimarketToggle && targetElement !== minimarketDropdown) {
+                 minimarketDropdown.style.display = 'none';
+             }
+         });
+     });</script>
 
 </body>
+
 </html>

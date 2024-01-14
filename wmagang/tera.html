@@ -82,8 +82,8 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link" >Layanan</a>
                         <ul class="isi-dropdown">
-                         <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
-                         <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
+                         <li><a href="https://banmod.indagkediri.online" target="_blank">Bantuan Modal</a></li>
+                         <!-- <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li> -->
                          <li><a href="merk.html">Legalitas Merk</a></li>
 					<li><a href="halal.html">Sertifikasi Halal</a></li>
 					<li><a href="sinas.html">Sinas</a></li>
@@ -110,16 +110,27 @@
     <section class="testimonial section-padding">
         <div class="container">
             <div class="row">
-                 <div class="col-lg-6 col-md-7 col-12">
+              <div class="col-lg-6 col-md-7 col-12" style="height: 100%; background-color: #b1afafbd; border-radius: 10px; padding: 10px; border: 5px solid #ffffff;">
                    <h1> <strong class="gradient-text" data-aos="fade-up" data-aos-delay="100">Panduan Tera/Tera Ulang</strong></h1>
 
                    
 
-                   <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Berikut adalah tata cara Pendaftaran Tera/Tera Ulang</h3>
-
-                   <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Unduh Panduan Lengkap Pendaftaran Tera/Tera Ulang</h3>
+                   <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Berikut tata cara Pendaftaran Tera/Tera Ulang</h3>
+                   <p class="mb-4" data-aos="fade-up" data-aos-delay="300" style="color: #ffffff;">
+                   Persyaratan:</br>
+                   1. Data Nama Usaha</br>
+                   2. Lokasi Usaha</br>
+                   3. NPWP</br>
+                   4. NIB OSS RBA</br>
+                   5. Email Sesuai NIB
+                   </p>
+                   <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Unduh Panduan Lengkap Tera/Tera Ulang</h3>
                    <a href="#" class="custom-bttn bttn-bg btn mt-2" data-aos="fade-up" data-aos-delay="300">Unduh</a>
                  </div>
+                 <div class="col-lg-6 col-md-7 col-12" style="height: 100%; background-color: #b1afafbd; border-radius: 10px; padding: 10px; border: 5px solid #ffffff;">
+                  <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Langkah-langkah Registrasi</h3>
+                  <img src="images/flow tera.png" alt="flow" style="height: auto; max-width: 100%; display: block; margin: 0 auto;" data-aos="fade-up" data-aos-delay="300">
+                </div>
             </div>
     </section>
     <footer class="site-footer">
@@ -194,6 +205,31 @@
      <script src="js/custom.js"></script>
      <script src="js/transition.js"></script>
      <script src="js/loader.js"></script>
+
+     <script>
+      document.addEventListener('DOMContentLoaded', function () {
+           // Tombol toggle dropdown minimarket
+           var minimarketToggle = document.getElementById('minimarket-dropdown-toggle');
+           // Dropdown minimarket
+           var minimarketDropdown = document.getElementById('minimarket-dropdown');
+      
+           // Tampilkan dropdown minimarket ketika tombol toggle diklik
+           minimarketToggle.addEventListener('click', function () {
+               if (minimarketDropdown.style.display === 'none' || minimarketDropdown.style.display === '') {
+                   minimarketDropdown.style.display = 'block';
+               } else {
+                   minimarketDropdown.style.display = 'none';
+               }
+           });
+      
+           // Sembunyikan dropdown minimarket saat klik di luar dropdown
+           document.addEventListener('click', function (event) {
+               var targetElement = event.target;
+               if (targetElement !== minimarketToggle && targetElement !== minimarketDropdown) {
+                   minimarketDropdown.style.display = 'none';
+               }
+           });
+       });</script>
 
 </body>
 </html>

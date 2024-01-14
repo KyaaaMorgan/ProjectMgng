@@ -52,16 +52,18 @@
                     <li class="nav-item">
                          <a href="#" class="nav-link" id="informasi-dropdown-toggle">Informasi</a>
                          <ul class="isi-dropdown" id="informasi-dropdown">
-                              <li><a href="pasar.html">Pasar</a></li>
-                              <li><a href="#" id="minimarket-dropdown-toggle">Minimarket</a></li>
-            <ul class="isi-drop" id="minimarket-dropdown">
-                                   <li><a href="indomaret.html">Indomaret</a></li>
-                                   <li><a href="alfamart.html">Alfamart</a></li>
-                              </ul>
-                    </li>
-                    <li><a href="mall.html">Mall</a></li>
-                    <li><a href="ikm.html">Industri Kecil Menengah</a></li>
-               </ul>
+     <li><a href="pasar.html">Pasar</a></li>
+     <li>
+         <a href="#" id="minimarket-dropdown-toggle">Minimarket</a>
+         <ul class="isi-drop" id="minimarket-dropdown">
+             <li><a href="indomaret.html">Indomaret</a></li>
+             <li><a href="alfamart.html">Alfamart</a></li>
+         </ul>
+     </li>
+     <li><a href="mall.html">Mall</a></li>
+     <li><a href="ikm.html">Industri Kecil Menengah</a></li>
+</ul>
+
                </li>
                <li class="nav-item">
                     <a href="#" class="nav-link">Layanan</a>
@@ -87,6 +89,7 @@
                <li class="nav-item">
                     <a href="contact.php" class="nav-link contact">Kontak</a>
                </li>
+               <div class="fa-eye-icon">
                <i class="fa fa-eye">
                     <?php
                     //koneksi
@@ -103,7 +106,10 @@
                          echo $new_count;
                     }
                     ?>
-               </i>
+               </i></div>
+               <div class="scroll-up-icon">
+    <i class="fa fa-arrow-up"></i>
+</div>
                </ul>
           </div>
 
@@ -370,82 +376,59 @@
      <script src="js/loader.js"></script>
 
      <script>
-          document.addEventListener('DOMContentLoaded', function () {
-               var informasiDropdownToggle = document.getElementById('informasi-dropdown-toggle');
-               var informasiDropdown = document.getElementById('informasi-dropdown');
-
-               informasiDropdownToggle.addEventListener('click', function (event) {
-                    event.preventDefault();
-
-                    // Toggle class 'active' untuk membuka atau menutup dropdown
-                    informasiDropdown.classList.toggle('active');
-               });
-
-               // Menutup dropdown jika diklik di luar dropdown
-               document.addEventListener('click', function (event) {
-                    var isClickInside = informasiDropdownToggle.contains(event.target) || informasiDropdown.contains(event.target);
-                    if (!isClickInside) {
-                         informasiDropdown.classList.remove('active');
-                    }
-               });
-          });
-     </script>
-
-<script>
     document.addEventListener('DOMContentLoaded', function () {
-        var minimarketDropdown = document.getElementById('minimarket-dropdown');
-        var minimarketDropdownToggle = document.getElementById('minimarket-dropdown-toggle');
-        var isiDrop = document.getElementById('minimarket-dropdown');
+        var scrollUpIcon = document.querySelector('.scroll-up-icon');
 
-        minimarketDropdownToggle.addEventListener('click', function (event) {
-            event.preventDefault();
-            isiDrop.classList.toggle('active');
-        });
-
-        // Menutup dropdown jika diklik di luar dropdown
-        document.addEventListener('click', function (event) {
-            var isClickInside = minimarketDropdownToggle.contains(event.target) || isiDrop.contains(event.target);
-            if (!isClickInside) {
-                isiDrop.classList.remove('active');
+        // Tampilkan tombol ketika pengguna menggulir ke bawah
+        window.addEventListener('scroll', function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollUpIcon.style.display = 'block';
+            } else {
+                scrollUpIcon.style.display = 'none';
             }
         });
+
+        // Smooth scroll ke atas ketika tombol diklik
+        scrollUpIcon.addEventListener('click', function () {
+            smoothScrollToTop();
+        });
+
+        // Fungsi untuk melakukan smooth scroll ke atas
+        function smoothScrollToTop() {
+            var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            if (currentPosition > 0) {
+                window.requestAnimationFrame(smoothScrollToTop);
+                window.scrollTo(0, currentPosition - currentPosition / 8);
+            }
+        }
     });
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+     // Tombol toggle dropdown minimarket
+     var minimarketToggle = document.getElementById('minimarket-dropdown-toggle');
+     // Dropdown minimarket
+     var minimarketDropdown = document.getElementById('minimarket-dropdown');
 
-          <script>
-               document.addEventListener('DOMContentLoaded', function () {
-    var informasiDropdownToggle = document.getElementById('informasi-dropdown-toggle');
-               var informasiDropdown = document.getElementById('informasi-dropdown');
+     // Tampilkan dropdown minimarket ketika tombol toggle diklik
+     minimarketToggle.addEventListener('click', function () {
+         if (minimarketDropdown.style.display === 'none' || minimarketDropdown.style.display === '') {
+             minimarketDropdown.style.display = 'block';
+         } else {
+             minimarketDropdown.style.display = 'none';
+         }
+     });
 
-               informasiDropdownToggle.addEventListener('click', function (event) {
-                    event.preventDefault();
-               informasiDropdown.classList.toggle('active');
-    });
+     // Sembunyikan dropdown minimarket saat klik di luar dropdown
+     document.addEventListener('click', function (event) {
+         var targetElement = event.target;
+         if (targetElement !== minimarketToggle && targetElement !== minimarketDropdown) {
+             minimarketDropdown.style.display = 'none';
+         }
+     });
+ });</script>
 
-               document.addEventListener('click', function (event) {
-        var isClickInside = informasiDropdownToggle.contains(event.target) || informasiDropdown.contains(event.target);
-               if (!isClickInside) {
-                    informasiDropdown.classList.remove('active');
-        }
-    });
-
-               var layananDropdownToggle = document.getElementById('layanan-dropdown-toggle');
-               var layananDropdown = document.getElementById('layanan-dropdown');
-
-               layananDropdownToggle.addEventListener('click', function (event) {
-                    event.preventDefault();
-               layananDropdown.classList.toggle('active');
-    });
-
-               document.addEventListener('click', function (event) {
-        var isClickInsideLayanan = layananDropdownToggle.contains(event.target) || layananDropdown.contains(event.target);
-               if (!isClickInsideLayanan) {
-                    layananDropdown.classList.remove('active');
-        }
-    });
-});
-     </script>
 
 </body>
 

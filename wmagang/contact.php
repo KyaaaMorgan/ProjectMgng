@@ -54,7 +54,7 @@
                         </ul>
                         </li>
                         <li><a href="mall.html">Mall</a></li>
-                        <li><a href="ikm.html">Industri Kecil Menengah</a></li>
+                        <li><a href="#">Industri Kecil Menengah</a></li>
                  </ul>
                  </li>
                     <li class="nav-item">
@@ -62,10 +62,10 @@
                         <ul class="isi-dropdown">
                          <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
                          <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
-                         <li><a href="merk.html">Legalitas Merk</a></li>
-					<li><a href="halal.html">Sertifikasi Halal</a></li>
+                         <li><a href="#">Legalitas Merk</a></li>
+					<li><a href="#">Sertifikasi Halal</a></li>
 					<li><a href="sinas.html">Sinas</a></li>
-                         <li><a href="tera.html">Tera/Tera Ulang</a></li>
+                         <li><a href="#">Tera/Tera Ulang</a></li>
 				     </ul>
                     </li>
                     <li class="nav-item">
@@ -158,7 +158,7 @@
         <div class="row">
 
           <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
-            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">We make creative <strong class="gradient-text">brands</strong> only.</h1>
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">We make creative <strong>brands</strong> only.</h1>
           </div>
 
           <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
@@ -178,24 +178,35 @@
           </div>
 
           <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
-            <h4 class="my-4">Kantor Kami</h4>
+            <h4 class="my-4">Our Studio</h4>
 
             <p class="mb-1">
               <i class="fa fa-home mr-2 footer-icon"></i> 
-              Jl. Penanggungan NO. 7, Bandar Lor, Kec. Mojoroto, Kota Kediri, Jawa Timur
+              Av. Lúcio Costa - Barra da Tijuca, Rio de Janeiro - RJ, Brazil
             </p>
           </div>
 
           <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
-            <p class="copyright-text">Copyright &copy; 2023 DISPERDAGIN
+            <p class="copyright-text">Copyright &copy; 2020 Your Company
             <br>
             <a rel="nofollow noopener" href="https://templatemo.com">Design: TemplateMo</a></p>
+          </div>
+
+          <div class="col-lg-4 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+            
+            <ul class="footer-link">
+              <li><a href="#">Stories</a></li>
+              <li><a href="#">Work with us</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
           </div>
 
           <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
             <ul class="social-icon">
               <li><a href="#" class="fa fa-instagram"></a></li>
               <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="#" class="fa fa-dribbble"></a></li>
+              <li><a href="#" class="fa fa-behance"></a></li>
             </ul>
           </div>
 
@@ -210,6 +221,31 @@
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/custom.js"></script>
      <script src="js/transition.js"></script>
+
+     <script>
+document.addEventListener('DOMContentLoaded', function () {
+     // Tombol toggle dropdown minimarket
+     var minimarketToggle = document.getElementById('minimarket-dropdown-toggle');
+     // Dropdown minimarket
+     var minimarketDropdown = document.getElementById('minimarket-dropdown');
+
+     // Tampilkan dropdown minimarket ketika tombol toggle diklik
+     minimarketToggle.addEventListener('click', function () {
+         if (minimarketDropdown.style.display === 'none' || minimarketDropdown.style.display === '') {
+             minimarketDropdown.style.display = 'block';
+         } else {
+             minimarketDropdown.style.display = 'none';
+         }
+     });
+
+     // Sembunyikan dropdown minimarket saat klik di luar dropdown
+     document.addEventListener('click', function (event) {
+         var targetElement = event.target;
+         if (targetElement !== minimarketToggle && targetElement !== minimarketDropdown) {
+             minimarketDropdown.style.display = 'none';
+         }
+     });
+ });</script>
 
 </body>
 </html>

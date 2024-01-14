@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>DISPERDAGIN | Dinas Perdagangan Dan Industri</title>
+     <title>DISPERDAGIN | Informasi Lokasi Indomaret</title>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -25,11 +25,18 @@
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=initMap" defer></script>-->
 
      <style>
-        #map, #mapkota,#mappesantren {
+        #map,#mappesantren {
             width: 100%;
             height: 500px;
-            top: 45px;
+            top: 35px;
             margin-bottom: 25px;
+        }
+
+        #mapkota {
+            width: 100%;
+            height: 500px;
+            top: 35px;
+            margin-bottom: 45px;
         }
 
         #mojoroto, #pesantren, #kota {
@@ -85,8 +92,8 @@
                          <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
                          <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
                          <li><a href="#">Legalitas Merk</a></li>
-					<li><a href="#">Sertifikasi Halal</a></li>
-					<li><a href="#">Sinas</a></li>
+					               <li><a href="#">Sertifikasi Halal</a></li>
+					               <li><a href="#">Sinas</a></li>
                          <li><a href="#">Tera/Tera Ulang</a></li>
 				     </ul>
                     </li>
@@ -111,16 +118,16 @@
         <div class="container">
              <div class="row">
                   <div class="col-lg-6 col-md-7 col-12">
-                    <h1> <strong class="gradient-text" data-aos="fade-up" data-aos-delay="100">Lokasi Alfamart Kota Kediri</strong></h1>
+                    <h1> <strong class="gradient-text" data-aos="fade-up" data-aos-delay="300">Lokasi Indomaret Kota Kediri</strong></h1>
 
                     <div class="quote" data-aos="fade-up" data-aos-delay="200"></div>
 
-                    <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Klik Menu dibawah untuk Menampilkan Lokasi</h3>
+                    <h3 class="mb-4" data-aos="fade-up" data-aos-delay="100">Klik Menu dibawah untuk Menampilkan Lokasi</h3>
                   </div>
              </div>
-             <a onclick="show('mojoroto')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up" data-aos-delay="300">Mojoroto</a>
-             <a onclick="show('pesantren')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up" data-aos-delay="300">Pesantren</a>
-             <a onclick="show('kota')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up" data-aos-delay="300">Kota</a>
+             <button onclick="show('mojoroto')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up" data-aos-delay="300">Mojoroto</button>
+             <button onclick="show('pesantren')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up" data-aos-delay="300">Pesantren</button>
+             <button onclick="show('kota')" class="custom-bttn bttn-bg btn mt-3" data-aos="fade-up" data-aos-delay="300">Kota</button>
              <!--Kecamatan Mojoroto-->
              <div id="mojoroto">
               <script>
@@ -141,33 +148,49 @@
 
         // Array objek dengan informasi marker
         var marker = [
-        {
-            position: { lat: -7.828380679225622, lng: 111.9866824668716},
-            title: "Alfamart Tamanan",
+          {
+            position: { lat: -7.826927351102762, lng:  112.00030921129246 },
+            title: "Indomaret Agus Salim",
           },
-        {
-            position: { lat: -7.808026415610315, lng: 112.00197353967584},
-            title: "Alfamart Kawi",
+          {
+            position: { lat: -7.827845434767996,  lng: 111.99669813158279 },
+            title: "Indomaret Kemunging",
           },
-        {
-            position: { lat: -7.8086229355744265, lng:  112.00463390493992},
-            title: "Alfamart Mojoroto",
+          {
+            position: { lat: -7.835722398777921, lng: 111.99373760483132 },
+            title: "Indomaret Raung",
           },
-        {
-            position: { lat: -7.8264154439389335, lng: 112.00506926690075},
-            title: "Alfamart Agus Salim",
+          {
+            position: { lat: -7.8274046237566175,  lng: 111.98686527732241 },
+            title: "Indomaret Semeru",
           },
-        {
-            position: { lat: -7.807799986766888, lng: 111.98346219869657},
-            title: "Alfamart Jl. Mastrip",
+          {
+            position: { lat: -7.811106735427172,  lng: 111.99274541124899 },
+            title: "Indomaret Veteran",
           },
-        {
-            position: { lat: -7.815429056209222, lng: 111.98906323412054},
-            title: "Alfamart Dr. Saharjo",
+          {
+            position: { lat: -7.824039906395721,  lng: 112.00564684788883 },
+            title: "Indomaret Wachid Hasyim",
           },
-        {
-            position: { lat: -7.781459700157066, lng: 112.00036962311403},
-            title: "Alfamart Mrican",
+          {
+            position: { lat: -7.821534787036125,  lng: 111.99843272975353 },
+            title: "Indomaret Penanggungan",
+          },
+          {
+            position: { lat: -7.824039906395721,  lng: 112.00564684788883 },
+            title: "Indomaret Mojoroto",
+          },
+          {
+            position: { lat: -7.799083915771001,  lng: 112.00165040719352 },
+            title: "Indomaret Ahmad Dahlan",
+          },
+          {
+            position: { lat: -7.780775809919864,   lng: 112.00068399296815 },
+            title: "Indomaret Gatot Subroto Mrican",
+          },
+          {
+            position: { lat: -7.78398607541717,   lng: 112.00029775487566 },
+            title: "Indomaret Sersan Bahrun Mrican",
           },
         ];
 
@@ -205,63 +228,6 @@
       }
       google.maps.event.addDomListener(window, "load", initMapmojoroto);
     </script>
-    </br>
-  </br>
-    <h3>List Alfamart Kecamatan Mojoroto</h3>
-    <table class="table table-striped table-bordered table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">No.</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Alamat</th>
-      <th scope="col">Kelurahan</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Alfamart Tamanan</td>
-      <td>Jl. Semeru</td>
-      <td>Campurejo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Alfamart Kawi</td>
-      <td>Jl. Kawi No. 27D</td>
-      <td>Mojoroto</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Alfamart Mojoroto</td>
-      <td>Jl. Jaksa Agung Suprapto No. 11</td>
-      <td>Mojoroto</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Alfamart Agus Salim</td>
-      <td>Jl. KH Agus Salim No. 6</td>
-      <td>Bandar Kidul</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Alfamart Jl. Mastrip</td>
-      <td>Jl. Mastrip Ruko Rege</td>
-      <td>Sukorame</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>Alfamart Dr. Sahardjo</td>
-      <td>Jl. Dr. Saharjo No. 3B</td>
-      <td>Campurejo]</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>Alfamart Mrican</td>
-      <td>Jl. Gatot Subroto No. 171</td>
-      <td>Mrican</td>
-    </tr>
-  </tbody>
-</table>
              </div>
 
              <!--Kecamatan Pesantren-->
@@ -285,17 +251,21 @@
           // Array objek dengan informasi marker
           var markerpesantren = [
           {
-            position: { lat: -7.830758615391627, lng: 112.04587058660734},
-            title: "Alfamart Mauni",
-        },
-        {
-            position: { lat: -7.832780558736911, lng: 112.05167380147536},
-            title: "Alfamart Imam Bakri",
-        },
-        {
-            position: { lat: -7.863872094152294, lng: 112.02859750080779},
-            title: "Alfamart Kapten Tendean",
-        },
+            position: { lat: -7.828111511796928, lng: 112.01758094900144 },
+            title: "Indomaret Kilisuci",
+          },
+          {
+            position: { lat: -7.828307588315349, lng: 112.03571160919843 },
+            title: "Indomaret Mauni Kediri",
+          },  
+          {
+            position: { lat: -7.833702255496926, lng: 112.04855545750881 }, 
+            title: "Indomaret Pesantren",
+          },
+          {
+            position: { lat: -7.824478838198158, lng: 112.02750255074503 },
+            title: "Indomaret Letjen Sutoyo Kediri",
+          },
           ];
   
           // Loop untuk membuat dan menambahkan marker ke peta
@@ -333,40 +303,7 @@
         google.maps.event.addDomListener(window, "load", initMappesantren);
       </script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw"></script>
-    </br>
-  </br>
-      <h3>List Alfamart Kecamatan Pesantren</h3>
-      <table class="table table-striped table-bordered table-hover">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">No.</th>
-        <th scope="col">Nama</th>
-        <th scope="col">Alamat</th>
-        <th scope="col">Kelurahan</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Alfamart Mauni</td>
-        <td>Jl. Mauni No. 87</td>
-        <td>Bangsal</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Alfamart Imam Bakri</td>
-        <td>Jl. Brigjend Pol. IBH Pranoto</td>
-        <td>Pesantren</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Alfamart Kapten Tendean</td>
-        <td>Jl. Kapten Tendean No. 400</td>
-        <td>Blabak</td>
-      </tr>
-    </tbody>
-  </table>         
-    </div>
+             </div>
 
               <!--Kecamatan Kota-->
              <div id="kota">
@@ -388,41 +325,25 @@
 
         // Array objek dengan informasi marker
         var markerkota = [
-        {
-            position: { lat: -7.843077806481376, lng: 112.00860322252969},
-            title: "Alfamart Urip Sumoharjo",
+          {
+            position: { lat: -7.8508784867052395, lng: 112.02957282817553 },
+            title: "Indomaret Ngronggo",
           },
-        {
-            position: { lat: -7.843222901822769, lng: 112.02498552490748},
-            title: "Alfamart Super Semar",
+          {
+            position: { lat: -7.814801207522401, lng: 112.03417007278148 },
+            title: "Indomaret Doko Indah",
           },
-        {
-            position: { lat: -7.8456661805845345, lng: 112.03258039289383},
-            title: "Alfamart Betet Bawang",
+          {
+            position: { lat: -7.810980514994962, lng: 112.02391880226132 },  
+            title: "Indomaret Selowareh Ngadirejo",
           },
-        {
-            position: { lat: -7.834670758007238, lng: 112.00947203910683},
-            title: "Alfamart Ngronggo",
+          {
+            position: { lat: -7.818422494613062, lng: 112.01904945765298 }, 
+            title: "Indomaret Joyoboyo",
           },
-        {
-            position: { lat: -7.828038238957005, lng: 112.01705641802718},
-            title: "Alfamart Kilisuci",
-          },
-        {
-            position: { lat: -7.823975050613908, lng: 112.02842289874994},
-            title: "Alfamart Letjen Sutoyo",
-          },
-        {
-            position: { lat: -7.820296649438336, lng: 112.02795016091359},
-            title: "Alfamart Letjen Suprapto",
-          },
-        {
-            position: { lat: -7.803839706254827, lng: 112.0087671601588},
-            title: "Alfamart Mayjend Sungkono",
-          },
-        {
-            position: { lat: -7.820275621759995, lng: 112.01710865918066},
-            title: "Alfamart Patiunus",
+          {
+            position: { lat: -7.845854320725291, lng: 112.00712518527371 }, 
+            title: "Indomaret Sersan Suharmaji",
           },
         ];
 
@@ -460,78 +381,8 @@
       }
       google.maps.event.addDomListener(window, "load", initMapkota);
     </script>
-    </br>
-    </br>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw"></script>
-    <h3>List Alfamart Kecamatan Kota</h3>
-    <table class="table table-striped table-bordered table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">No.</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Alamat</th>
-      <th scope="col">Kelurahan</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Alfamart Urip Sumoharjo</td>
-      <td>Jl. Urip Sumoharjo No. 227</td>
-      <td>Ngronggo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Alfamart Super Semar</td>
-      <td>Jl. Super Semar</td>
-      <td>Ngronggo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Alfamart Betet Bawang</td>
-      <td>Jl. Betet Bawang/td>
-      <td>Ngronggo</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Alfamart Ngronggo</td>
-      <td>Jl. Urip Sumoharjo No. 174</td>
-      <td>Ngronggo</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Alfamart Kilisuci</td>
-      <td>Jl. Kilisuci No. 72</td>
-      <td>Kampung Dalem</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>Alfamart Letjend Sutoyo</td>
-      <td>Jl. Letjend Sutoyo No. 48</td>
-      <td>Burengan</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>Alfamart Letjend Suprapto</td>
-      <td>Jl. Letjend Suprapto No. 39</td>
-      <td>Burengan</td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td>Alfamart Mayjend Sungkono</td>
-      <td>Jl. Mayjend Sungkono</td>
-      <td>Semampir</td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-      <td>Alfamart Patiunus</td>
-      <td>Jl. Patiunus No. 82</td>
-      <td>Jagalan</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
-        </div>
+      <h3>List Indomaret Kecamatan Kota</h3>
    </section>
 
 

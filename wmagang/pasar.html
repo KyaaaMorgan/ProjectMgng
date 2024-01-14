@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>DISPERDAGIN | Informasi Lokasi Pasar</title>
+     <title>DISPERDAGIN | Dinas Perdagangan Dan Industri</title>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -25,10 +25,15 @@
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=initMap" defer></script>-->
 
      <style>
-        #map {
+        #map, #mapkota,#mappesantren {
             width: 100%;
             height: 500px;
-            margin-bottom: 20px;
+            top: 45px;
+            margin-bottom: 25px;
+        }
+
+        #mojoroto, #pesantren, #kota {
+            display: none;
         }
      </style>
 </head>
@@ -71,7 +76,7 @@
                         </ul>
                         </li>
                         <li><a href="mall.html">Mall</a></li>
-                        <li><a href="ikm.html">Industri Kecil Menengah</a></li>
+                        <li><a href="#">Industri Kecil Menengah</a></li>
                  </ul>
                  </li>
                     <li class="nav-item">
@@ -79,10 +84,10 @@
                         <ul class="isi-dropdown">
                          <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
                          <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
-                         <li><a href="merk.html">Legalitas Merk</a></li>
-					<li><a href="halal.html">Sertifikasi Halal</a></li>
-					<li><a href="sinas.html">Sinas</a></li>
-                         <li><a href="tera.html">Tera/Tera Ulang</a></li>
+                         <li><a href="#">Legalitas Merk</a></li>
+					<li><a href="#">Sertifikasi Halal</a></li>
+					<li><a href="#">Sinas</a></li>
+                         <li><a href="#">Tera/Tera Ulang</a></li>
 				     </ul>
                     </li>
                     <li class="nav-item">
@@ -113,6 +118,7 @@
                     <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Berikut adalah Pasar Tradisional yang ada di Kota Kediri</h3>
                   </div>
              </div>
+             <div>
              <div id="map"></div>
     <script>
       function initMap() {
@@ -209,6 +215,8 @@
       }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMZNueDH2SvMOsnjLCcny_qJKHBcUvUPw&callback=initMap"></script>
+  </br>
+</br>
     <h3>List Pasar Kota Kediri</h3>
     <table class="table table-striped table-bordered table-hover">
   <thead class="thead-dark">
@@ -223,7 +231,7 @@
     <tr>
       <th scope="row">1</th>
       <td>Pasar Banjaran</td>
-      <td>Jl. Insinyur Sutami</td>
+      <td>Jl. Insinyur Sutami No. 31</td>
       <td>Banjaran</td>
     </tr>
     <tr>
@@ -236,36 +244,36 @@
       <th scope="row">3</th>
       <td>Pasar Pahing</td>
       <td>Jl. HOS Cokroaminoto</td>
-      <td>Jamsaren</td>
+      <td>Singonegaran</td>
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>Pasar Mrican</td>
-      <td>Jl. Gatot Subroto</td>
+      <td>Kios Pasar Mrican</td>
       <td>Mrican</td>
     </tr>
     <tr>
       <th scope="row">5</th>
       <td>Pasar Bandar</td>
-      <td>Jl. KH Wachid Hasyim</td>
+      <td>Jl. KH Wachid Hasyim No. 64</td>
       <td>Bandar Lor</td>
     </tr>
     <tr>
       <th scope="row">6</th>
       <td>Pasar Grosir Ngronggo</td>
-      <td>Jl. Supersemar</td>
+      <td>Jl. Kapten Tendean</td>
       <td>Ngronggo</td>
     </tr>
     <tr>
       <th scope="row">7</th>
       <td>Pasar Ngaglik</td>
-      <td>Jl. Sersan KKO Harun No. 53</td>
+      <td>Jl. Sersan Kko Harun No. 53</td>
       <td>Dandangan</td>
     </tr>
     <tr>
       <th scope="row">8</th>
       <td>Pasar Mojoroto</td>
-      <td>Jl. Mojoroto Gang 2</td>
+      <td>Jl. Mojoroto Gg. 2 No.4</td>
       <td>Mojoroto</td>
     </tr>
     <tr>
@@ -277,23 +285,23 @@
     <tr>
       <th scope="row">10</th>
       <td>Pasar Muning</td>
-      <td>Jl. Semeru/td>
+      <td>Jl. Semeru</td>
       <td>Lirboyo</td>
     </tr>
     <tr>
       <th scope="row">11</th>
       <td>Pasar Pesantren</td>
-      <td>Jl. Pesantren 5</td>
+      <td>Jl. Pesantren No. 5</td>
       <td>Pesantren</td>
     </tr>
     <tr>
       <th scope="row">12</th>
       <td>Pasar Tempurejo</td>
-      <td>Jl. Ketami</td>
-      <td>Tempurejo</td>
+      <td>Jl. Raya Ketami</td>
+      <td>Ketami</td>
     </tr>
   </tbody>
-</table>  
+</table>  </div>
   </section>
     <footer class="site-footer">
       <div class="container">
