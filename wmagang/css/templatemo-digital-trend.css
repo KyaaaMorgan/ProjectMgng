@@ -347,6 +347,7 @@ transition: all .5s ease;
   background-color: rgba(0, 0, 0, 0.555);
   border-radius: 4px;
   z-index: 2;
+  width: 200%;
 }
 
 .isi-dropdown li {
@@ -447,27 +448,39 @@ transition: all .5s ease;
 }
 
 .isi-drop li {
-  padding: 10px;
+  padding: 8px;
 }
 
 /* Mengatur posisi dropdown di sebelah tautan */
 #minimarket-dropdown-toggle + .isi-drop {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  position: static;
+ 
 }
 
 #minimarket-dropdown {
   display: none;
-     position: absolute;
-     background-color: rgba(0, 0, 0, 0.555);
-     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-     z-index: 1;
-     right: 0;
-     top: 0;
+  position: right;
+  background-color: rgba(0, 0, 0, 0.555);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 #minimarket-dropdown li {
+  display: block;
+}
+
+.isi-dropdown li {
+  position: relative;
+}
+
+.isi-drop {
+  display: none;
+  position: right;
+  background-color: rgba(0, 0, 0, 0.555);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  
+}
+
+.isi-dropdown:hover .isi-drop {
   display: block;
 }
 
