@@ -54,7 +54,7 @@
                         </ul>
                         </li>
                         <li><a href="mall.html">Mall</a></li>
-                        <li><a href="#">Industri Kecil Menengah</a></li>
+                        <li><a href="ikm.html">Industri Kecil Menengah</a></li>
                  </ul>
                  </li>
                     <li class="nav-item">
@@ -62,10 +62,10 @@
                         <ul class="isi-dropdown">
                          <li><a href="https://banmod.indagkediri.online/home.html" target="_blank">Bantuan Modal</a></li>
                          <li><a href="#">Izin Tempat Penjualan Minuman Beralkohol</a></li>
-                         <li><a href="#">Legalitas Merk</a></li>
-					<li><a href="#">Sertifikasi Halal</a></li>
+                         <li><a href="merk.html">Legalitas Merk</a></li>
+					<li><a href="halal.html">Sertifikasi Halal</a></li>
 					<li><a href="sinas.html">Sinas</a></li>
-                         <li><a href="#">Tera/Tera Ulang</a></li>
+                         <li><a href="tera.html">Tera/Tera Ulang</a></li>
 				     </ul>
                     </li>
                     <li class="nav-item">
